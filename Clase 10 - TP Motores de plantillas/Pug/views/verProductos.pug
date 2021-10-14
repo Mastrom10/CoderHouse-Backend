@@ -1,0 +1,22 @@
+extends layout
+
+block fragment
+    a(class="btn btn-primary", href="/", role="button") Ver Productos
+    table(class="table")
+        thead
+            tr
+                th ID
+                th Title
+                th Price
+                th Thumbnail
+        tbody
+          each producto in productitos
+            tr
+                td!=producto.id 
+                td!=producto.title
+                td!=producto.price
+                td
+                    img(src=producto.thumbnail, class="img-thumbnail", alt="imagen de "+producto.title)
+          else
+            tr No hay valores para mostrar.
+          

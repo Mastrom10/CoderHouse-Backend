@@ -1,0 +1,16 @@
+extends layout
+
+block fragment
+    a(class="btn btn-primary", href="/productos", role="button") Cargar Productos
+    h2 Ingrese Producto
+    form(action="/api/productos", method="POST")
+        label(for="title", class="form-label") Title
+        input(type="text", id="title", name="title", class="form-control")
+        br
+        label(for="price" class="form-label") Price
+        input(type="number" id="price" name="price" class="form-control")
+        br
+        label(for="thumbnail" class="form-label") Thumbnail
+        input(type="url" id="thumbnail" name="thumbnail" class="form-control")
+        br
+        button(type="submit" class="btn btn-primary") Enviar

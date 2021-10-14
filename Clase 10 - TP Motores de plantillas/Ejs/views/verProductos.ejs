@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <%- include('./Header') %>
+
+  <% const hayProductos = productitos.length > 0; %>
+
+<body>
+    <div class="container">
+      <a class="btn btn-primary" href="/productos" role="button">Cargar Productos</a>
+        <div class="p-3">
+          <% if(hayProductos){ %>
+          <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Price</th>
+                    <th>Thumbnail</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for (const productos of productitos) {%>
+                <tr>
+                    <td><%=productos.id%></td>
+                    <td><%=productos.title%> </td>
+                    <td>$ <%=productos.price%> </td>
+                    <td><img src="<%=productos.thumbnail%>" class="img-thumbnail" alt="imagen de <%=productos.title%>"> </td>
+                </tr>
+                <%};%>
+            </tbody>
+        </table>
+        <% } else { %>
+          <h3>no se encontraron datos</h3>
+        <% } %>
+        </div>
+    </div>
+</body>
+
+</html>

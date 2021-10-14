@@ -5,6 +5,7 @@
     "version": "0.2.0",
     "configurations": [
 
+
         {
             "type": "pwa-node",
             "request": "launch",
@@ -12,8 +13,8 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "cwd": "${workspaceFolder}\\Clase 8 - API RESTful",
-            "program": "${workspaceFolder}\\Clase 8 - API RESTful\\server.js"
+            "cwd": "${workspaceFolder}\\Clase 10 - TP Motores de plantillas\\Ejs",
+            "program": "${workspaceFolder}\\Clase 10 - TP Motores de plantillas\\Ejs\\server.js"
         }
     ]
 }
