@@ -1,0 +1,40 @@
+IR a: <a class="btn btn-primary" href="/" role="button">Ver Productos</a>
+<form action="/api/productos" method="POST" class="border border-primary p-3 mb-3 mt-3 rounded">
+    <h2>Ingrese Producto</h2>
+    <label for="title" class="form-label">Title</label>
+    <input type="text" id="title" name="title" class="form-control">
+    <br>
+    <label for="price" class="form-label">Price</label>
+    <input type="number" id="price" name="price" class="form-control">
+    <br>
+    <label for="thumbnail" class="form-label">Thumbnail</label>
+    <input type="url" id="thumbnail" name="thumbnail" class="form-control">
+    <br>
+    <button type="submit" class="btn btn-primary">Enviar</button>
+</form>
+<div id="productosEnRealTime" class="border border-primary p-3 mb-3 mt-3 rounded"></div>
+
+<form id="Chat" onsubmit="SendMesage(); return false;" class="border border-primary p-3 mb-3 rounded">
+    <h2>Centro de Mensajes</h2>
+
+    <div class="mb-3">
+        <label for="mail" class="form-label">Mail: </label>
+        <input type="email" id="mail" name="mail" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label for="Conversacion" class="form-label">Chat</label>
+        <div class="form-control" id="Conversacion" name="Conversacion" style="max-height: 150px;  overflow-y: auto; overflow-wrap: break-word;"> . </div >
+    </div>
+    <div class="row g-3 mb-3">
+        <label for="mensaje" class="col-auto col-form-label">Mensaje:</label>
+        <div class="col-8">
+            <input type="text" id="mensaje" name="mensaje" class="form-control" />
+        </div>
+        <div class="col-2">
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </div>
+    </div>
+    <div class="mb-3">
+
+    </div>
+</form>
