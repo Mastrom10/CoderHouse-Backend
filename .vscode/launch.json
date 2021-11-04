@@ -4,6 +4,7 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+    
 
 
         {
@@ -13,8 +14,8 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "cwd": "${workspaceFolder}\\Clase 10 - TP Motores de plantillas\\Ejs",
-            "program": "${workspaceFolder}\\Clase 10 - TP Motores de plantillas\\Ejs\\server.js"
+            "cwd": "${workspaceFolder}\\TP FINAL - Ecommerce BackEnd",
+            "program": "${workspaceFolder}\\TP FINAL - Ecommerce BackEnd\\server.js"
         }
     ]
 }

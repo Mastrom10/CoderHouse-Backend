@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <title>Ver Productos</title>
+</head>
+
+<body>
+    <div class="container">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+            <p class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                <span class="fs-4">TP Ecommerce N Mastrom</span>
+            </p>
+
+            <ul class="nav nav-pills">
+                <li class="nav-item">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="adminCheck">
+                        <label class="form-check-label" for="adminCheck">
+                          Administrador
+                        </label>
+                      </div>
+                </li>
+            </ul>
+        </header>
+        
+        <div  class="row">
+            <div class="col-4">
+                <h2 class="text-center">
+                    Productos 
+                    <button type="button" class="btn btn-primary" id="btntoggleProducto" onclick="ToggleFormCrearProducto()">Crear</button>
+                </h2> 
+                <div class="row d-none" id="CrearProducto">
+                    <div class="col-12">
+                        <form action="#" onsubmit="return GuardarProducto(this);" >
+                            <button type="submit" class="btn btn-primary mb-3">Guardar</button>
+
+                            <div class="form-floating mb-3">
+                                <input type="number" class="form-control" id="id" name="id" placeholder="ID">
+                                <label for="nombre">ID (optional)</label>
+                            </div>
+                            <!-- nombre, descripcion, codigo, foto, precio, stock -->
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre">
+                                <label for="nombre">Nombre</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="descripcion" name="descripcion" placeholder="Descripcion">
+                                <label for="descripcion">Descripcion</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="codigo" name="codigo" placeholder="Codigo">
+                                <label for="codigo">Codigo</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="foto" name="foto" placeholder="Foto">
+                                <label for="foto">Foto</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="number" class="form-control" id="precio" name="precio" placeholder="Precio">
+                                <label for="precio">Precio</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="number" class="form-control" id="stock" name="stock" placeholder="Stock">
+                                <label for="stock">Stock</label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div id="ContenedorProductos">                    
+                </div>
+            </div>
+
+            <div class="col-4 border-end border-start">
+                <h2 class="text-center">Carrito <button type="button" class="btn btn-primary" onclick="crearCarrito()">Crear</button></h2>
+                <div id="ContenedorCarritos">                    
+                </div>
+            </div>
+            <div class="col-4">
+                <h2 class="text-center">Carrito Seleccionado: <span id="idCarritoSeleccionado">Ninguno</span></h2>
+                <div id="ContenedorProductosCarritos">                    
+                </div>
+            </div>
+
+        </div>
+
+        
+
+
+
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
