@@ -1,0 +1,15 @@
+//Crear el contenedor
+docker run -d -p 27017:27017 --name mydatabase mongo:4.2
+
+//Entrar en el contenedor
+docker exec -it mydatabase bash
+
+
+//Entrar a la DB
+mongo
+
+
+//Crear una DB
+use NombreDeLaDB
+
+db.UnaColeccion.insertOne({ name: 'Nico' })
