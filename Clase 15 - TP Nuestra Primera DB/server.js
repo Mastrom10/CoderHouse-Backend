@@ -13,6 +13,8 @@ const srvSocket = new IOServer(httpServer)
 
 const { productos, routerProductos } = require("./src/router/RouterProductos")
 
+const mensajesDAO = require('./src/DBs/MensajesDAO.js')
+
 /* ------------------------------------------------------ */
 /* Cargamos el motor de vistas.  */
 app.engine('hbs', exphbs({
@@ -40,7 +42,8 @@ srvSocket.on('connection', async socket => {
   socket.on('nuevoMensaje', mensaje => {
     mensaje.Hora = (new Date()).toLocaleString("en-ES");
     console.log(`Nuevo Mensaje: ${mensaje}`)
-    GuardarEnArchivo(mensaje);
+    //GuardarEnArchivo(mensaje);
+    mensajesDAO.insertarMensaje(mensaje);
     srvSocket.sockets.emit('nuevoMensaje', mensaje);
   })
 })
@@ -79,10 +82,6 @@ app.get('/productos', async (req, res) => {
   const productitos = await productos();
   res.render('CargarProductos.hbs', { productitos })
 })
-
-
-
-
 
 
 
