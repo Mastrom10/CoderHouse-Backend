@@ -1,22 +1,25 @@
 import Router from 'express';
 import Producto from '../entities/Producto.js';
-import * as productoDAL from '../DBs/ProductoDAL.js'
+import ProductoDAL from '../DBs/ProductoDAL.js'
 import OnlyAdminsPrivilege from '../Middlewares/Autorizacion.js'
 
 const routerProductos = Router();
 
+const productoDAL = new ProductoDAL();
+
+
 /* Usuarios y admins | Me permite listar todos los productos disponibles ó un producto por su id*/
-routerProductos.get('/:id?', (req, res) => {
+routerProductos.get('/:id?', async (req, res) => {
     let id = req.params.id;
     if (id) {
-        let producto = productoDAL.getProductoById(id)
+        let producto = await productoDAL.getProductoById(id)
         if (producto) {
             res.json(producto);
         } else {
             res.status(404).json({ "error": "Producto no encontrado" });
         }
     } else {
-        let productos = productoDAL.getProductos()
+        let productos = await productoDAL.getProductos()
         res.json(productos);
     }
 });
@@ -25,11 +28,11 @@ routerProductos.get('/:id?', (req, res) => {
 
 
 /* incorporar productos al listado (disponible para administradores) */
-routerProductos.post('/', OnlyAdminsPrivilege, (req, res) => {
+routerProductos.post('/', OnlyAdminsPrivilege, async (req, res) => {
     try {
         if (req.body.nombre && req.body.precio && req.body.descripcion && req.body.codigo && req.body.foto) {
-        let producto = new Producto(req.body.nombre, req.body.descripcion, req.body.codigo, req.body.foto, req.body.precio, req.body.stock);
-        productoDAL.saveProducto(producto)
+        let producto = new Producto(req.body.nombre, req.body.descripcion, req.body.codigo, req.body.foto, req.body.precio, req.body.stock, await productoDAL.getNextIdProducto());
+        await productoDAL.saveProducto(producto)
         res.status(200).json(producto)
         } else {
             res.status(400).json({ "error": "Faltan datos" });
@@ -46,9 +49,9 @@ routerProductos.post('/', OnlyAdminsPrivilege, (req, res) => {
 });
 
 /* Actualiza un producto por su id (disponible para administradores) */
-routerProductos.put('/:id', OnlyAdminsPrivilege, (req, res) => {
+routerProductos.put('/:id', OnlyAdminsPrivilege, async (req, res) => {
     let id = req.params.id;
-    let producto = productoDAL.getProductoById(id);
+    let producto = await productoDAL.getProductoById(id);
     if (producto) {
         producto.nombre = req.body.nombre;
         producto.descripcion = req.body.descripcion;
@@ -56,7 +59,7 @@ routerProductos.put('/:id', OnlyAdminsPrivilege, (req, res) => {
         producto.foto = req.body.foto;
         producto.precio = req.body.precio;
         producto.stock = req.body.stock;
-        productoDAL.updateProducto(producto)
+        await productoDAL.updateProducto(producto)
         res.status(200).json(producto)
     } else {
         res.status(404).json({ 'error': 'No se encontró el producto' });
@@ -65,11 +68,11 @@ routerProductos.put('/:id', OnlyAdminsPrivilege, (req, res) => {
 });
 
 /*Borra un producto por su id (disponible para administradores) */
-routerProductos.delete('/:id', OnlyAdminsPrivilege, (req, res) => {
+routerProductos.delete('/:id', OnlyAdminsPrivilege, async (req, res) => {
     let id = req.params.id;
-    let producto = productoDAL.getProductoById(id);
+    let producto = await productoDAL.getProductoById(id);
     if (producto) {
-        productoDAL.deleteProducto(id)
+        await productoDAL.deleteProducto(id)
         res.status(200).json({ 'status': `producto ${id} Eliminado con exito` })
     } else {
         res.status(404).json({ 'error': 'No se encontró el producto' });

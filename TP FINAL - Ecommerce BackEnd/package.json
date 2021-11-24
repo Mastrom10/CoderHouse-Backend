@@ -7,6 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
+  "engines": {
+    "node": ">=14.0.0"
+  },
   "keywords": [
     "tpFinal",
     "ecommerce"
@@ -15,6 +18,7 @@
   "license": "ISC",
   "type": "module",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongodb": "^4.2.0"
   }
 }

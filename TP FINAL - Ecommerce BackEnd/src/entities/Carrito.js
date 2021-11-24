@@ -1,11 +1,9 @@
-
-import { getNextIdCarrito } from "../DBs/CarritoDAL.js";
 export default class Carrito {
 //constructor estructura: id, timestamp(carrito), producto: [{ id, timestamp(producto), nombre, descripcion, código, foto (url), precio, stock }]
 
     productos = [];
 
-    constructor(id = getNextIdCarrito(), timestamp = Date.now(), productos = []) {
+    constructor(id = 0, timestamp = Date.now(), productos = []) {
         this.id = id;
         this.timestamp = timestamp;
         this.productos = productos;

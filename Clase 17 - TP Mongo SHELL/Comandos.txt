@@ -1,0 +1,271 @@
+0)
+
+>use ecommerce
+switched to db ecommerce
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+1) Agregar 10 documentos con valores distintos a las colecciones mensajes y productos. 
+El formato de los documentos debe estar en correspondencia con el que venimos utilizando 
+en el entregable con base de datos MariaDB.
+/////////////////////////////////////////////////////////////////////////////////////////////    
+
+> db.mensajes.insertMany([
+     {"mail":"nicolasmastrom@gmail.com","mensaje":"holi bro","Hora":"10/25/2021, 12:04:30 PM"},
+     {"mail":"OtraPersona@gmail.com","mensaje":"Todo bien?","Hora":"10/25/2021, 12:04:52 PM"},
+     {"mail":"nicolasmastrom@gmail.com","mensaje":"si todo bien pa","Hora":"10/25/2021, 12:05:30 PM"},
+     {"mail":"OtraPersona@gmail.com","mensaje":"Todo bien?","Hora":"10/25/2021, 12:04:52 PM"},
+     {"mail":"nicolasmastrom@gmail.com","mensaje":"si todo bien pa","Hora":"10/25/2021, 12:06:30 PM"},
+     {"mail":"OtraPersona@gmail.com","mensaje":"Todo bien?","Hora":"10/25/2021, 12:04:52 PM"},
+     {"mail":"nicolasmastrom@gmail.com","mensaje":"si todo bien pa","Hora":"10/25/2021, 12:07:30 PM"},
+     {"mail":"OtraPersona@gmail.com","mensaje":"Todo bien?","Hora":"10/25/2021, 12:04:52 PM"},
+     {"mail":"nicolasmastrom@gmail.com","mensaje":"si todo bien pa","Hora":"10/25/2021, 12:08:30 PM"},
+     {"mail":"OtraPersona@gmail.com","mensaje":"Todo bien?","Hora":"10/25/2021, 12:04:52 PM"},
+     {"mail":"nicolasmastrom@gmail.com","mensaje":"si todo bien pa","Hora":"10/25/2021, 12:09:30 PM"},
+ ])
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("6195c07bc50661822e2b49e8"),
+                ObjectId("6195c07bc50661822e2b49e9"),
+                ObjectId("6195c07bc50661822e2b49ea"),
+                ObjectId("6195c07bc50661822e2b49eb"),
+                ObjectId("6195c07bc50661822e2b49ec"),
+                ObjectId("6195c07bc50661822e2b49ed"),
+                ObjectId("6195c07bc50661822e2b49ee"),
+                ObjectId("6195c07bc50661822e2b49ef"),
+                ObjectId("6195c07bc50661822e2b49f0"),
+                ObjectId("6195c07bc50661822e2b49f1"),
+                ObjectId("6195c07bc50661822e2b49f2")
+        ]
+}
+
+> db.productos.insertMany([
+     {
+         "id": 1,
+         "title": "Pizza",
+         "price": 120,
+         "thumbnail": "https://cdn3.iconfinder.com/data/icons/street-food-and-food-trucker-1/64/pizza-fast-food-bake-bread-128.png"
+     },
+     {
+         "id": 2,
+         "title": "Patitas de pollo",
+         "price": 580,
+         "thumbnail": "https://cdn3.iconfinder.com/data/icons/street-food-and-food-trucker-1/64/fried-chicken-thigh-fast-food-128.png"
+     },
+     {
+         "id": 3,
+         "title": "Mazorca",
+         "price": 1700,
+         "thumbnail": "https://cdn3.iconfinder.com/data/icons/street-food-and-food-trucker-1/64/grilled-corn-vegetable-organic-plant-128.png"
+     },
+     {
+         "title": "Burger",
+         "price": 1450,
+         "thumbnail": "https://cdn3.iconfinder.com/data/icons/street-food-and-food-trucker-1/64/hamburger-fast-food-patty-bread-128.png",
+         "id": 4
+     },
+     {
+         "title": "Papas Fritas",
+         "price": 4100,
+         "thumbnail": "https://cdn3.iconfinder.com/data/icons/street-food-and-food-trucker-1/64/french-fries-snacks-fast-food-128.png",
+         "id": 5
+     },
+     {
+         "title": "Manzanas",
+         "price": 4990,
+         "thumbnail": "https://cdn3.iconfinder.com/data/icons/street-food-and-food-trucker-1/64/fruit-organic-plant-orange-vitamin-128.png",
+         "id": 6
+     },
+     {
+         "title": "Bebida ",
+         "price": 2850,
+         "thumbnail": "https://cdn3.iconfinder.com/data/icons/street-food-and-food-trucker-1/64/beverage-juice-refreshment-soft-drink_-128.png",
+         "id": 7
+     },
+     {
+         "title": "Calamar freco",
+         "price": 2300,
+         "thumbnail": "https://cdn3.iconfinder.com/data/icons/street-food-and-food-trucker-1/64/grilled-squid-seafood-animal-marine-128.png",
+         "id": 8
+     },
+     {
+         "title": "Calamar más freco",
+         "price": 900,
+         "thumbnail": "https://cdn3.iconfinder.com/data/icons/street-food-and-food-trucker-1/64/grilled-squid-seafood-animal-marine-128.png",
+         "id": 9
+     },
+     {
+         "title": "Calamar no tan freco",
+         "price": 3350,
+         "thumbnail": "https://cdn3.iconfinder.com/data/icons/street-food-and-food-trucker-1/64/grilled-squid-seafood-animal-marine-128.png",
+         "id": 10
+     }
+
+ ])
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("6195c09ec50661822e2b49f3"),
+                ObjectId("6195c09ec50661822e2b49f4"),
+                ObjectId("6195c09ec50661822e2b49f5"),
+                ObjectId("6195c09ec50661822e2b49f6"),
+                ObjectId("6195c09ec50661822e2b49f7"),
+                ObjectId("6195c09ec50661822e2b49f8"),
+                ObjectId("6195c09ec50661822e2b49f9"),
+                ObjectId("6195c09ec50661822e2b49fa"),
+                ObjectId("6195c09ec50661822e2b49fb"),
+                ObjectId("6195c09ec50661822e2b49fc")
+        ]
+}
+>
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+2) Definir las claves de los documentos en relación a los campos de las tablas de esa base. 
+En el caso de los productos, poner valores al campo precio entre 
+los 100 y 5000 pesos(eligiendo valores intermedios, ej: 120, 580, 900, 1280, 1700, 2300, 
+2860, 3350, 4320, 4990). 
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+show collections
+mensajes
+productos
+>
+>
+> db.productos.createIndex({"id":1});
+{
+        "createdCollectionAutomatically" : false,
+        "numIndexesBefore" : 1,
+        "numIndexesAfter" : 2,
+        "ok" : 1
+}
+> db.mensajes.createIndex({"Hora":1});
+{
+        "createdCollectionAutomatically" : false,
+        "numIndexesBefore" : 1,
+        "numIndexesAfter" : 2,
+        "ok" : 1
+}
+>
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+3) Listar todos los documentos en cada colección.
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+> db.productos.find();
+{ "_id" : ObjectId("6195c09ec50661822e2b49f3"), "id" : 1, "title" : "Pizza", "price" : 120, "thumbnail" : "https://cdn3.iconfinder.com/data/icons/street-food-and-food-trucker-1/64/pizza-fast-food-bake-bread-128.png" }
+{ "_id" : ObjectId("6195c09ec50661822e2b49f4"), "id" : 2, "title" : "Patitas de pollo", "price" : 580, "thumbnail" : "https://cdn3.iconfinder.com/data/icons/street-food-and-food-trucker-1/64/fried-chicken-thigh-fast-food-128.png" }
+{ "_id" : ObjectId("6195c09ec50661822e2b49f5"), "id" : 3, "title" : "Mazorca", "price" : 1700, "thumbnail" : "https://cdn3.iconfinder.com/data/icons/street-food-and-food-trucker-1/64/grilled-corn-vegetable-organic-plant-128.png" }
+{ "_id" : ObjectId("6195c09ec50661822e2b49f6"), "title" : "Burger", "price" : 1450, "thumbnail" : "https://cdn3.iconfinder.com/data/icons/street-food-and-food-trucker-1/64/hamburger-fast-food-patty-bread-128.png", "id" : 4 }
+{ "_id" : ObjectId("6195c09ec50661822e2b49f7"), "title" : "Papas Fritas", "price" : 4100, "thumbnail" : "https://cdn3.iconfinder.com/data/icons/street-food-and-food-trucker-1/64/french-fries-snacks-fast-food-128.png", "id" : 5 }
+{ "_id" : ObjectId("6195c09ec50661822e2b49f8"), "title" : "Manzanas", "price" : 4990, "thumbnail" : "https://cdn3.iconfinder.com/data/icons/street-food-and-food-trucker-1/64/fruit-organic-plant-orange-vitamin-128.png", "id" : 6 }
+{ "_id" : ObjectId("6195c09ec50661822e2b49f9"), "title" : "Bebida ", "price" : 2850, "thumbnail" : "https://cdn3.iconfinder.com/data/icons/street-food-and-food-trucker-1/64/beverage-juice-refreshment-soft-drink_-128.png", "id" : 7 }
+{ "_id" : ObjectId("6195c09ec50661822e2b49fa"), "title" : "Calamar freco", "price" : 2300, "thumbnail" : "https://cdn3.iconfinder.com/data/icons/street-food-and-food-trucker-1/64/grilled-squid-seafood-animal-marine-128.png", "id" : 8 }
+{ "_id" : ObjectId("6195c09ec50661822e2b49fb"), "title" : "Calamar más freco", "price" : 900, "thumbnail" : "https://cdn3.iconfinder.com/data/icons/street-food-and-food-trucker-1/64/grilled-squid-seafood-animal-marine-128.png", "id" : 9 }
+{ "_id" : ObjectId("6195c09ec50661822e2b49fc"), "title" : "Calamar no tan freco", "price" : 3350, "thumbnail" : "https://cdn3.iconfinder.com/data/icons/street-food-and-food-trucker-1/64/grilled-squid-seafood-animal-marine-128.png", "id" : 10 }
+>
+> db.mensajes.find()
+{ "_id" : ObjectId("6195c07bc50661822e2b49e8"), "mail" : "nicolasmastrom@gmail.com", "mensaje" : "holi bro", "Hora" : "10/25/2021, 12:04:30 PM" }
+{ "_id" : ObjectId("6195c07bc50661822e2b49e9"), "mail" : "OtraPersona@gmail.com", "mensaje" : "Todo bien?", "Hora" : "10/25/2021, 12:04:52 PM" }
+{ "_id" : ObjectId("6195c07bc50661822e2b49ea"), "mail" : "nicolasmastrom@gmail.com", "mensaje" : "si todo bien pa", "Hora" : "10/25/2021, 12:05:30 PM" }
+{ "_id" : ObjectId("6195c07bc50661822e2b49eb"), "mail" : "OtraPersona@gmail.com", "mensaje" : "Todo bien?", "Hora" : "10/25/2021, 12:04:52 PM" }
+{ "_id" : ObjectId("6195c07bc50661822e2b49ec"), "mail" : "nicolasmastrom@gmail.com", "mensaje" : "si todo bien pa", "Hora" : "10/25/2021, 12:06:30 PM" }
+{ "_id" : ObjectId("6195c07bc50661822e2b49ed"), "mail" : "OtraPersona@gmail.com", "mensaje" : "Todo bien?", "Hora" : "10/25/2021, 12:04:52 PM" }
+{ "_id" : ObjectId("6195c07bc50661822e2b49ee"), "mail" : "nicolasmastrom@gmail.com", "mensaje" : "si todo bien pa", "Hora" : "10/25/2021, 12:07:30 PM" }
+{ "_id" : ObjectId("6195c07bc50661822e2b49ef"), "mail" : "OtraPersona@gmail.com", "mensaje" : "Todo bien?", "Hora" : "10/25/2021, 12:04:52 PM" }
+{ "_id" : ObjectId("6195c07bc50661822e2b49f0"), "mail" : "nicolasmastrom@gmail.com", "mensaje" : "si todo bien pa", "Hora" : "10/25/2021, 12:08:30 PM" }
+{ "_id" : ObjectId("6195c07bc50661822e2b49f1"), "mail" : "OtraPersona@gmail.com", "mensaje" : "Todo bien?", "Hora" : "10/25/2021, 12:04:52 PM" }
+{ "_id" : ObjectId("6195c07bc50661822e2b49f2"), "mail" : "nicolasmastrom@gmail.com", "mensaje" : "si todo bien pa", "Hora" : "10/25/2021, 12:09:30 PM" }
+>
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+4) Mostrar la cantidad de documentos almacenados en cada una de ellas.
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+>  db.mensajes.count()
+11
+>  db.productos.count()
+10
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+5) Realizar un CRUD sobre la colección de productos:
+5a) Agregar un producto más en la colección de productos 
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+> db.productos.insert({ "title" : "Manzanas Verdes", "price" : 500, "thumbnail" : "https://cdn3.iconfinder.com/data/icons/street-food-and-food-trucker-1/64/fruit-organic-plant-orange-vitamin-128.png", "id" : 11 })
+WriteResult({ "nInserted" : 1 })
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+5b) Realizar una consulta por nombre de producto específico:
+/////////////////////////////////////////////////////////////////////////////////////////////
+/////////// - Listar los productos con precio menor a 1000 pesos.
+
+> db.productos.find({ "price" : { $lt : 1000 } })
+{ "_id" : ObjectId("6195c09ec50661822e2b49f3"), "id" : 1, "title" : "Pizza", "price" : 120, "thumbnail" : "https://cdn3.iconfinder.com/data/icons/street-food-and-food-trucker-1/64/pizza-fast-food-bake-bread-128.png" }
+{ "_id" : ObjectId("6195c09ec50661822e2b49f4"), "id" : 2, "title" : "Patitas de pollo", "price" : 580, "thumbnail" : "https://cdn3.iconfinder.com/data/icons/street-food-and-food-trucker-1/64/fried-chicken-thigh-fast-food-128.png" }
+{ "_id" : ObjectId("6195c09ec50661822e2b49fb"), "title" : "Calamar más freco", "price" : 900, "thumbnail" : "https://cdn3.iconfinder.com/data/icons/street-food-and-food-trucker-1/64/grilled-squid-seafood-animal-marine-128.png", "id" : 9 }
+{ "_id" : ObjectId("6195c10ec50661822e2b49fd"), "title" : "Manzanas Verdes", "price" : 500, "thumbnail" : "https://cdn3.iconfinder.com/data/icons/street-food-and-food-trucker-1/64/fruit-organic-plant-orange-vitamin-128.png", "id" : 11 }
+
+/////////// - Listar los productos con precio entre los 1000 a 3000 pesos.
+
+> db.productos.find({ "price" : { $gt : 1000, $lt : 3000 } })
+{ "_id" : ObjectId("6195c09ec50661822e2b49f5"), "id" : 3, "title" : "Mazorca", "price" : 1700, "thumbnail" : "https://cdn3.iconfinder.com/data/icons/street-food-and-food-trucker-1/64/grilled-corn-vegetable-organic-plant-128.png" }
+{ "_id" : ObjectId("6195c09ec50661822e2b49f6"), "title" : "Burger", "price" : 1450, "thumbnail" : "https://cdn3.iconfinder.com/data/icons/street-food-and-food-trucker-1/64/hamburger-fast-food-patty-bread-128.png", "id" : 4 }
+{ "_id" : ObjectId("6195c09ec50661822e2b49f9"), "title" : "Bebida ", "price" : 2850, "thumbnail" : "https://cdn3.iconfinder.com/data/icons/street-food-and-food-trucker-1/64/beverage-juice-refreshment-soft-drink_-128.png", "id" : 7 }
+{ "_id" : ObjectId("6195c09ec50661822e2b49fa"), "title" : "Calamar freco", "price" : 2300, "thumbnail" : "https://cdn3.iconfinder.com/data/icons/street-food-and-food-trucker-1/64/grilled-squid-seafood-animal-marine-128.png", "id" : 8 }
+
+/////////// - Listar los productos con precio mayor a 3000 pesos.
+
+> db.productos.find({ "price" : { $gt : 3000 } })
+{ "_id" : ObjectId("6195c09ec50661822e2b49f7"), "title" : "Papas Fritas", "price" : 4100, "thumbnail" : "https://cdn3.iconfinder.com/data/icons/street-food-and-food-trucker-1/64/french-fries-snacks-fast-food-128.png", "id" : 5 }
+{ "_id" : ObjectId("6195c09ec50661822e2b49f8"), "title" : "Manzanas", "price" : 4990, "thumbnail" : "https://cdn3.iconfinder.com/data/icons/street-food-and-food-trucker-1/64/fruit-organic-plant-orange-vitamin-128.png", "id" : 6 }
+{ "_id" : ObjectId("6195c09ec50661822e2b49fc"), "title" : "Calamar no tan freco", "price" : 3350, "thumbnail" : "https://cdn3.iconfinder.com/data/icons/street-food-and-food-trucker-1/64/grilled-squid-seafood-animal-marine-128.png", "id" : 10 }
+
+/////////// - Realizar una consulta que traiga sólo el nombre del tercer producto más barato.
+
+> db.productos.find({}, { "title" : 1, "_id" : 0 }).sort({ "price" : 1 }).skip(2).limit(1)
+
+{ "title" : "Patitas de pollo" }
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+5c) Hacer una actualización sobre todos los productos, agregando el campo stock a todos ellos con un valor de 100.
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+> db.productos.updateMany({}, { $set : { "stock" : 100 } })
+{ "acknowledged" : true, "matchedCount" : 11, "modifiedCount" : 11 }
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+5d) Cambiar el stock a cero de los productos con precios mayores a 4000 pesos. 
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+> db.productos.updateMany({ "price" : { $gt : 4000 } }, { $set : { "stock" : 0 } })
+{ "acknowledged" : true, "matchedCount" : 2, "modifiedCount" : 2 }
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+5e) Borrar los productos con precio menor a 1000 pesos 
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+> db.productos.deleteMany({ "price" : { $lt : 1000 } })
+{ "acknowledged" : true, "deletedCount" : 4 }
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+6) Crear un usuario 'pepe' clave: 'asd456' que sólo pueda leer la base de datos ecommerce. 
+Verificar que pepe no pueda cambiar la información.
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+> db.createUser({ user: 'pepe', pwd: 'asd456', roles: [ { role: 'read', db: 'ecommerce' } ] })
+Successfully added user: {
+        "user" : "pepe",
+        "roles" : [
+                {
+                        "role" : "read",
+                        "db" : "ecommerce"
+                }
+        ]
+}
+
+> exit
+bye
+
+

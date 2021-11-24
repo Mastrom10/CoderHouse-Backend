@@ -1,70 +1,38 @@
+import * as ProductoDaoArchivo from "./Archivo/ProductosDaoArchivo.js"
+import * as ProductoDaoMongoDB from "./MongoDB/ProductosDaoMongoDB.js"
 
-import Producto from "../entities/Producto.js";
-import fs from "fs";
+export default class ProductoDAL {
 
-// Guardar un producto en el archivo JSON
-export function saveProducto(producto) {
-  let productos = getProductos();
-  productos.push(producto);
-  fs.writeFileSync("./src/DBs/productos.json", JSON.stringify(productos));
-}
-
-// Obtener todos los productos del archivo JSON
-export  function getProductos() {
-  let productosJSON = JSON.parse(fs.readFileSync("./src/DBs/productos.json"));
-    let productos = [];
-    productosJSON.forEach(producto => {
-        productos.push(new Producto(producto.nombre, producto.descripcion, producto.codigo, producto.foto, producto.precio, producto.stock, producto.id, producto.timestamp));
-    });
-  return productos;
-}
-
-// Obtener un producto por Id
-export  function getProductoById(id) {
-  let productos =  getProductos();
-  let producto = productos.find(p => p.id == id);
-  if(producto){
-    return new Producto(producto.nombre, producto.descripcion, producto.codigo, producto.foto, producto.precio,producto.stock, producto.id, producto.timestamp);
-  } else {
-    return null;
-  }
-  
-}
-
-//Obtener ID maximo de los Productos
-export function getNextIdProducto() {
-  let productos = getProductos();
-  let maxId = 0;
-  productos.forEach(producto => {
-    if (producto.id > maxId) {
-      maxId = producto.id;
+    constructor() {
+        this.dao = ProductoDaoMongoDB;
     }
-  });
-  return maxId + 1;
+
+    async saveProducto(producto) {
+        this.dao.saveProducto(producto);
+    }
+
+    async getProductos() {
+        return await this.dao.getProductos();
+    }
+
+    async getProductoById(id) {
+        return await this.dao.getProductoById(id);
+    }
+
+    async getNextIdProducto() {
+        return await this.dao.getNextIdProducto();
+    }
+
+    async getProductosByCodigo(codigo) {
+        return await this.dao.getProductosByCodigo(codigo);
+    }
+
+    async updateProducto(producto) {
+        this.dao.updateProducto(producto);
+    }
+
+    async deleteProducto(id) {
+        this.dao.deleteProducto(id);
+    }
+
 }
-
-// Obtener un producto por Codigo
-export function getProductosByCodigo(codigo) {
-  let productos = getProductos();
-  let productosFiltrados = productos.filter(p => p.codigo == codigo);
-  return productosFiltrados;
-}   
-
-// Actualizar un producto del JSON
-export function updateProducto(producto) {
-  let productos = getProductos();
-  let index = productos.findIndex(p => p.id == producto.id);
-  productos[index] = producto;
-  fs.writeFileSync("./src/DBs/productos.json", JSON.stringify(productos));
-}
-
-// Eliminar un producto del JSON por Id
-export function deleteProducto(id) {
-  let productos = getProductos();
-  let index = productos.findIndex(p => p.id == id);
-  productos.splice(index, 1);
-  fs.writeFileSync("./src/DBs/productos.json", JSON.stringify(productos));
-}
-
-
-
