@@ -1,10 +1,26 @@
 import * as ProductoDaoArchivo from "./Archivo/ProductosDaoArchivo.js"
 import * as ProductoDaoMongoDB from "./MongoDB/ProductosDaoMongoDB.js"
+import * as ProductoFirebase from "./Firebase/ProductosDaoFirebase.js"
+import {config } from "../../config.js"
+
 
 export default class ProductoDAL {
 
     constructor() {
-        this.dao = ProductoDaoMongoDB;
+        switch (config.DB_Type) {
+            case "MongoDB": 
+                this.dao =  ProductoDaoMongoDB;
+                break;
+            case "Firebase":
+                this.dao =  ProductoFirebase;
+                break;
+            case "Archivo":
+                this.dao =  ProductoDaoArchivo;
+                break; 
+            default:
+                this.dao =  ProductoDaoArchivo;
+                break;
+        }
     }
 
     async saveProducto(producto) {

@@ -15,8 +15,10 @@ export default class Carrito {
     }
 
     //quitar producto
-    quitarProducto(producto) {
-        this.productos.splice(this.productos.indexOf(producto), 1);
+    quitarProducto(productoID) {
+        //encontrar Index
+        const index = this.productos.findIndex(producto => producto.id == productoID);
+        this.productos.splice(index, 1);
     }
 
     //calcular total

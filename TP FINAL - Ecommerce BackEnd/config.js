@@ -2,7 +2,7 @@
 
 export const config = {
     //Archivo, MongoDB, Firebase
-    DB_Type : 'Archivo',
+    DB_Type : 'Firebase',
     DB_Archivo : {
         Carrito_Json_Path: './src/DBs/Archivo/carrito.json',
         Producto_Json_Path: './src/DBs/Archivo/producto.json'
@@ -14,7 +14,6 @@ export const config = {
         Producto_Collection: 'Producto'
     },
     DB_Firebase : {
-        Carrito_Collection: 'Carrito',
-        Producto_Collection: 'Producto'
+        databaseURL: "https://ecommerce-6dfbf.firebaseio.com"
     }
 }
