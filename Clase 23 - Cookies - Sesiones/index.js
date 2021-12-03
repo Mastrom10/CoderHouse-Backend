@@ -13,7 +13,7 @@ app.use(session({
     secret: 'secreto',
     resave: true,
     saveUninitialized: true
-}));
+}));  
 
 //contador de req.session.contador
 app.get("/con-session",  (req, res) => {
