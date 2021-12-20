@@ -4,9 +4,6 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-    
-
-
         {
             "type": "pwa-node",
             "request": "launch",
@@ -14,8 +11,8 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "cwd": "${workspaceFolder}\\TP FINAL - Ecommerce BackEnd",
-            "program": "${workspaceFolder}\\TP FINAL - Ecommerce BackEnd\\server.js"
+            "program": "${workspaceFolder}/Clase 22 - TP Mocks y normalización/server.js",
+            "cwd": "${workspaceFolder}/Clase 22 - TP Mocks y normalización",
         }
     ]
 }
