@@ -1,4 +1,5 @@
-IR a: <a class="btn btn-primary" href="/" role="button">Ver Productos</a>
+IR a: <a class="btn btn-primary" href="/" role="button">Ver Productos</a> <a class="btn btn-primary"
+    href="/ProductosTest" role="button">Ver Productos MOCK</a>
 <form action="/api/productos" method="POST" class="border border-primary p-3 mb-3 mt-3 rounded">
     <h2>Ingrese Producto</h2>
     <label for="title" class="form-label">Title</label>
@@ -14,20 +15,62 @@ IR a: <a class="btn btn-primary" href="/" role="button">Ver Productos</a>
 </form>
 <div id="productosEnRealTime" class="border border-primary p-3 mb-3 mt-3 rounded"></div>
 
+
+<!-- 
+        { 
+            author: {
+                id: 'mail del usuario', 
+                nombre: 'nombre del usuario', 
+                apellido: 'apellido del usuario', 
+                edad: 'edad del usuario', 
+                alias: 'alias del usuario',
+                avatar: 'url avatar (foto, logo) del usuario'
+            },
+            text: 'mensaje del usuario'
+        }
+-->
 <form id="Chat" onsubmit="SendMesage(); return false;" class="border border-primary p-3 mb-3 rounded">
     <h2>Centro de Mensajes</h2>
+    <h4 id="CompressionRate">(Compresion 0%)</h4>
+    <h3>Autor</h3>
+    <div class="row">
+        <div class="mb-3 col-4">
+            <label for="id" class="form-label">Mail: </label>
+            <input type="email" id="id" name="id" class="form-control" />
+        </div>
+        <div class="mb-3 col-4">
+            <label for="alias" class="form-label">alias: </label>
+            <input type="text" id="alias" name="alias" class="form-control" />
+        </div>
+        <div class="mb-3 col-4">
+            <label for="avatar" class="form-label">avatar: </label>
+            <input type="text" id="avatar" name="avatar" class="form-control" />
+        </div>
+    </div>
+     <div class="row">
+        <div class="mb-3 col-5">
+            <label for="nombre" class="form-label">nombre: </label>
+            <input type="text" id="nombre" name="nombre" class="form-control" />
+        </div>
+        <div class="mb-3 col-5">
+            <label for="apellido" class="form-label">apellido: </label>
+            <input type="text" id="apellido" name="apellido" class="form-control" />
+        </div>
+        <div class="mb-3 col-2">
+            <label for="edad" class="form-label">edad: </label>
+            <input type="text" id="edad" name="edad" class="form-control" />
+        </div>
+    </div>
 
+    <h3>Conversacion:</h3>
     <div class="mb-3">
-        <label for="mail" class="form-label">Mail: </label>
-        <input type="email" id="mail" name="mail" class="form-control" />
+        <div class="form-control" id="Conversacion" name="Conversacion"
+            style="max-height: 150px; height:150px; overflow-y: auto; overflow-wrap: break-word;"> . </div>
     </div>
-    <div class="mb-3">
-        <label for="Conversacion" class="form-label">Chat</label>
-        <div class="form-control" id="Conversacion" name="Conversacion" style="max-height: 150px;  overflow-y: auto; overflow-wrap: break-word;"> . </div >
-    </div>
+
+    <h3>Mensaje:</h3>
     <div class="row g-3 mb-3">
-        <label for="mensaje" class="col-auto col-form-label">Mensaje:</label>
-        <div class="col-8">
+        <div class="col-10">
             <input type="text" id="mensaje" name="mensaje" class="form-control" />
         </div>
         <div class="col-2">
