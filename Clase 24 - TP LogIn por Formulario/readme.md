@@ -44,19 +44,21 @@ ahora si podemos iniciar nuestra db con:
 ```
 
 finalmente podemos lanzar el servidor:
-
 ```bash
  node server.js
 ```
 
 ### URLs de MOCKs
 
-<http://localhost:8080/ProductosTest/>
+http://localhost:8080/ProductosTest
+
 
 ### URLs de Productos en la DB
 
-<http://localhost:8080/>
+http://localhost:8080/
+
 
 ### URLs de Carga de productos, chat y carga de productos
 
-<http://localhost:8080/productos>
+http://localhost:8080/productos
+

@@ -11,8 +11,8 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/Clase 22 - TP Mocks y normalización/server.js",
-            "cwd": "${workspaceFolder}/Clase 22 - TP Mocks y normalización",
+            "program": "${workspaceFolder}/Clase 24 - TP LogIn por Formulario/server.js",
+            "cwd": "${workspaceFolder}/Clase 24 - TP LogIn por Formulario",
         }
     ]
 }
