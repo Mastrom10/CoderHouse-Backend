@@ -11,8 +11,8 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/Clase 24 - TP LogIn por Formulario/server.js",
-            "cwd": "${workspaceFolder}/Clase 24 - TP LogIn por Formulario",
+            "program": "${workspaceFolder}/Clase 26 - TP Inicio de Sesión/server.js",
+            "cwd": "${workspaceFolder}/Clase 26 - TP Inicio de Sesión",
         }
     ]
 }
