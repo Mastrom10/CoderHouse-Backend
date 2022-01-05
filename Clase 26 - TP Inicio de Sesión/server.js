@@ -16,7 +16,6 @@ const { Server: IOServer } = require('socket.io')
 /* TP Login por Formulario */
 const session = require('express-session')
 const MongoStore = require('connect-mongo')
-const advancedOptions = { useNewUrlParser: true, useUnifiedTopology: true }
 /* TP Login por Formulario */
 
 
@@ -60,35 +59,88 @@ app.use(express.static('src/public'))
 
 
 /* TP Login por Formulario */
+const advancedOptions = { useNewUrlParser: true, useUnifiedTopology: true }
 app.use(session({
   store: MongoStore.create({
-      //En Atlas connect App :  Make sure to change the node version to 2.2.12:
-      mongoUrl: 'mongodb+srv://admin:Merluza23@cluster0.vuapg.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
-      mongoOptions: advancedOptions
+    //En Atlas connect App :  Make sure to change the node version to 2.2.12:
+    mongoUrl: 'mongodb+srv://admin:Merluza23@cluster0.vuapg.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
+    mongoOptions: advancedOptions
   }),
   /* ----------------------------------------------------- */
 
   secret: 'shhhhhhhhhhhhhhhhhhhhh',
   resave: false,
-  saveUninitialized: false ,
+  saveUninitialized: false,
   cookie: {
-      maxAge: 600000
-  } 
+    maxAge: 600000
+  }
 }))
 
-/* TP Login por Formulario */
-/* middleware verifica session */
-app.use(async (req, res, next) => {
-  if (req.session.nombre || req.url == '/login' || req.url == '/logout' || req.url == '/register') {
-    req.session.contador = req.session.contador+1 || 1;
-    next();
+
+passport.use('register', new LocalStrategy({
+  usernameField: 'email',
+  passReqToCallback: true
+}, async (req, username, password, done) => {
+
+  const { nombre, email} = req.body;
+  const usuario = { nombre, username, email, password, contador: 0 };
+  const resultado = await miUsuarioDAO.addUsuario(usuario);
+
+  if (!resultado.error) {
+    return done(null, usuario)
   } else {
-    res.redirect('/login');
+    return done({ error: resultado.error })
+
   }
-})
+}));
 
 
 
+passport.use('login', new LocalStrategy({
+  usernameField: 'email'
+}, async (username, password, done) => {
+  if (await miUsuarioDAO.checkPassword(username, password)) {
+    const usuario = await miUsuarioDAO.getUsuario(username);
+    return done(null, usuario);
+  } else {
+    return done({ error: 'Usuario o contraseña incorrectos' }, false)
+  }
+}));
+
+
+passport.serializeUser(function (user, done) {
+  done(null, user.username);
+});
+
+passport.deserializeUser(async function (username, done) {
+  const usuario = await miUsuarioDAO.getUsuario(username)
+  done(null, usuario);
+});
+
+
+
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+
+
+/* --------------------- AUTH --------------------------- */
+
+function isAuth(req, res, next) {
+  if (req.isAuthenticated()) {
+    next()
+  } else {
+    res.redirect('/login')
+  }
+}
+function contarVisitas(req, res, next) {
+  if (!req.user.contador) {
+    req.user.contador = 0
+  }
+  req.user.contador++
+  next()
+}
 
 /* TP Normalizr */
 const authorSchema = new schema.Entity('author');
@@ -105,7 +157,7 @@ srvSocket.on('connection', async socket => {
   console.log('Nuevo cliente conectado!')
   const productitos = await productos();
   socket.emit('productosUpdate', { productitos })
-  
+
   socket.on('nuevoMensaje', async mensaje => {
     mensaje.Hora = (new Date()).toLocaleString("en-ES");
     console.log(`Nuevo Mensaje: ${JSON.stringify(mensaje)}`)
@@ -123,9 +175,9 @@ app.post('/api/productos', async (req, res, next) => {
 /* TP WebSockets */
 const nombreArchivo = 'src/DBs/mensajes.json';
 
-async function GuardarEnArchivo(mensaje){
+async function GuardarEnArchivo(mensaje) {
   let mensajes = await fs.promises.readFile(nombreArchivo, 'utf8');
-  if (mensajes == ""){
+  if (mensajes == "") {
     mensajes = [];
   }
   mensajes = JSON.parse(mensajes);
@@ -135,7 +187,7 @@ async function GuardarEnArchivo(mensaje){
 
 }
 
-async function getMensajesNormalizados(){
+async function getMensajesNormalizados() {
   let mensajes = await fs.promises.readFile(nombreArchivo, 'utf8');
   mensajes = JSON.parse(mensajes);
   const mensajesNormalizados = normalize(mensajes, listaMensajesSchema);
@@ -150,21 +202,21 @@ async function getMensajesNormalizados(){
 
 /* ------------------------------------------------------ */
 /* Cargamos las Views con los formularios.  */
-app.get('/', async (req, res) => {
+app.get('/', isAuth, contarVisitas, async (req, res) => {
   const productitos = await productos();
   console.log(productitos)
-  res.render('verProductos.hbs', { productitos, nombreUsuario: req.session.nombre })
+  res.render('verProductos.hbs', { productitos, nombreUsuario: req.user.nombre })
 })
 
-app.get('/productos', async (req, res) => {
+app.get('/productos', isAuth, contarVisitas, async (req, res) => {
   const productitos = await productos();
-  res.render('CargarProductos.hbs', { productitos, nombreUsuario: req.session.nombre })
+  res.render('CargarProductos.hbs', { productitos, nombreUsuario: req.user.nombre })
 })
 
 /** TP Mocks y normalización **/
-app.get('/ProductosTest', async (req, res) => {
+app.get('/ProductosTest', isAuth, contarVisitas, async (req, res) => {
   const productitos = await productosTest();
-  res.render('verProductos.hbs', { productitos, nombreUsuario: req.session.nombre })
+  res.render('verProductos.hbs', { productitos, nombreUsuario: req.user.nombre })
 })
 
 
@@ -175,58 +227,50 @@ app.get('/login', (req, res) => {
   res.render('login.hbs')
 })
 
-app.post('/login', async (req, res) => {
-  const { nombre, email, password } = req.body;
-  if (await miUsuarioDAO.checkPassword(email, password)) {
-      const usuario = await miUsuarioDAO.getUsuario(email);
-      req.session.nombre = usuario.nombre;
-      req.session.email = usuario.email;
-      req.session.password = usuario.password;
-      req.session.contador = usuario.contador;
-      res.redirect('/')
-  } else {
-      res.render('login.hbs', { error: 'Usuario o contraseña incorrectos' })
-  }
-}
-);
+app.post('/login', passport.authenticate('login', { failureRedirect: '/faillogin', successRedirect: '/' }))
+
+app.get('/faillogin', (req, res) => {
+  res.render('login.hbs', { error: 'Usuario o contraseña incorrectos' })
+})
 
 app.get('/logout', (req, res) => {
-  res.render('logout.hbs', {logout:true, nombreUsuario: req.session.nombre})
-  req.session.destroy();
+  res.render('logout.hbs', { logout: true, nombreUsuario: req.user.nombre })
+  req.logout();
 })
 
 app.get('/register', (req, res) => {
-  if(req.session.nombre){
-    res.redirect('/');
-  }else{
     res.render('register.hbs');
-  }
 })
 
-app.post('/register', async (req, res) => {
-  const { nombre, email, password } = req.body;
-  const usuario = { nombre, email, password, contador: 0 };
-  const resultado = await miUsuarioDAO.addUsuario(usuario);
-  if (!resultado.error) {
-    req.session.nombre = nombre;
-    res.redirect('/');
-  } else {
-    res.render('register.hbs', { error: resultado.error });
-  }
-})
+app.post('/register', passport.authenticate('register', { failureRedirect: '/failregister', successRedirect: '/' }))
 
+app.get('/failregister', (req, res) => {
+  res.render('register.hbs', { error: "Error al crear cuenta." });
+})
 
 
 /* TP Login por Formulario */
 /* Prueba de Session */
-app.get('/session', (req, res) => {
+app.get('/session', isAuth, contarVisitas, (req, res) => {
   if (req.session.contador) {
-      req.session.contador++
-      res.send(`Ud ha visitado el sitio ${req.session.contador} veces.`)
+    req.session.contador++
+    res.send(`Ud ha visitado el sitio ${req.session.contador} veces.`)
   } else {
-      req.session.contador = 1
-      res.send('Bienvenido!')
+    req.session.contador = 1
+    res.send('Bienvenido!')
   }
+})
+
+// DATOS
+app.get('/datos', isAuth, contarVisitas, (req, res) => {
+  res.render('datos.hbs', {
+    username: req.user.username,
+    nombreUsuario: req.user.nombre, 
+    nombre: req.user.nombre,
+    email: req.user.email,
+    password: req.user.password,
+    contador: req.user.contador
+  })
 })
 
 
@@ -234,6 +278,6 @@ app.get('/session', (req, res) => {
 const PORT = 8080
 const server = httpServer.listen(PORT)
 server.on('listening', () => {
-    console.log(`ya me conecté al puerto ${server.address().port}`)
+  console.log(`ya me conecté al puerto ${server.address().port}`)
 })
 server.on('error', error => { console.log(error) })

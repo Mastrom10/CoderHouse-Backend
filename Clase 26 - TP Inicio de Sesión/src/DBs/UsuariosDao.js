@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
 
 const usuariosSchema = new mongoose.Schema({
+    username: { type: String, required: true },
     email: { type: String, required: true },
     password: { type: String, required: true },
     nombre: { type: String, required: true },
@@ -42,7 +43,7 @@ class UsuariosDao {
     }
 
     validarUsuario(usuario) {
-        if (usuario.email && usuario.password && usuario.nombre) {
+        if (usuario.username && usuario.email && usuario.password && usuario.nombre) {
             return true 
         }
         return false
