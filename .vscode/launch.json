@@ -11,8 +11,8 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/Clase 26 - TP Inicio de Sesión/server.js",
-            "cwd": "${workspaceFolder}/Clase 26 - TP Inicio de Sesión",
+            "program": "${workspaceFolder}/Clase 28 - TP Usando el objeto process/server.js",
+            "cwd": "${workspaceFolder}/Clase 28 - TP Usando el objeto process",
         }
     ]
 }

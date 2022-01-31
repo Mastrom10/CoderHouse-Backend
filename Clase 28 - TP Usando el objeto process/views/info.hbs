@@ -1,0 +1,30 @@
+<div class="container">
+    <div  style="background-color: lightblue;color: black;">
+        <h1>Informacion del sistema</h1>
+        <!-- { 
+    //Argumentos de entrada
+    argumentos: process.argv,
+    //Nombre de la plataforma (sistema operativo) 
+    plataforma: process.platform,
+    //Versión de node.js          
+    versionNode: process.version,
+    //Memoria total reservada (rss)
+    memoriaTotal: process.memoryUsage().rss,
+    //Path de ejecución
+    pathEjecucion: process.execPath,
+    //Process id
+    pid: process.pid,
+    //Carpeta del proyecto
+    carpetaProyecto: __dirname  
+    } -->
+
+        <h3>argumentos: {{argumentos}} </h3>
+        <h3>plataforma: {{plataforma}} </h3>
+        <h3>versionNode: {{versionNode}} </h3>
+        <h3>memoriaTotal: {{memoriaTotal}} </h3>
+        <h3>pathEjecucion: {{pathEjecucion}} </h3>
+        <h3>pid: {{pid}} </h3>
+        <h3>carpetaProyecto: {{carpetaProyecto}} </h3>
+
+    </div>
+</div>
