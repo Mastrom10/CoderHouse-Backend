@@ -1,3 +1,9 @@
+# Informe
+
+Informe completo de las pruebas realizadas. 
+https://docs.google.com/document/d/1FNnPgT5V2gF_eb6yHGoEwNR1b3ctTz6QimheXyR1utQ/edit?usp=sharing
+
+
 # Configuracion
 
 Para crear DB, node initDB.js
