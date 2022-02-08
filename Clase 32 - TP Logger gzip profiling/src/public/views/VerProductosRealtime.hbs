@@ -1,0 +1,21 @@
+<h1>Lista Productos Real Time: </h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Price</th>
+            <th>Thumbnail</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each productitos}}
+        <tr>
+            <td>{{id}}</td>
+            <td>{{title}}</td>
+            <td>$ {{price}}</td>
+            <td><img src="{{thumbnail}}" class="img-thumbnail" alt="imagen de {{title}}" style="width:50px"> </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

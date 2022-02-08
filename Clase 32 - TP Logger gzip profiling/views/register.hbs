@@ -1,0 +1,30 @@
+<div class="conteiner">
+    <h1>Registro De Usuario</h1>
+
+    {{#if error}}
+    <!--- boostrap closable error box    -->
+
+    <div class="alert alert-danger" role="alert" id="error-box">
+        <strong>Error!</strong> <span id="error-message"> {{error}}</span>
+    </div>
+    {{/if}}
+
+
+
+    <form action="/register" method="POST"  >
+        <label for="nombre">Ingrese su nombre </label>
+        <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre" required>
+        <br>
+        <!--- input email    -->
+        <label for="email">Ingrese su email </label>
+        <input type="email" name="email" id="email" placeholder="Ingrese su email" required>
+        <br>
+        <!--- input password    -->
+        <label for="password">Ingrese su password </label>
+        <input type="password" name="password" id="password" placeholder="Ingrese su password" required>
+        <br>
+        
+        <input type="submit" value="Enviar">
+    </form>
+
+</div>

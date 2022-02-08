@@ -1,0 +1,21 @@
+<a class="btn btn-primary" href="/productos" role="button">Cargar Productos</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Price</th>
+            <th>Thumbnail</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each productitos}}
+        <tr>
+            <td>{{id}}</td>
+            <td>{{title}}</td>
+            <td>$ {{price}}</td>
+            <td><img src="{{thumbnail}}" class="img-thumbnail" alt="imagen de {{title}}"> </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

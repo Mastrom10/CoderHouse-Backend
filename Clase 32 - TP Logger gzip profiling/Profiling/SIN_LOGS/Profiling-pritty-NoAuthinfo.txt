@@ -1,0 +1,866 @@
+Statistical profiling result from Proffiling-raw-NoAuthinfo.log, (5770 ticks, 11 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+   4852   84.1%          /usr/bin/node
+     99    1.7%          /lib/x86_64-linux-gnu/libc-2.31.so
+      6    0.1%          /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28
+      3    0.1%          [vdso]
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+     53    0.9%    6.5%  LazyCompile: *parse /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:269:30
+     39    0.7%    4.8%  LazyCompile: *wrap /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:101:22
+     37    0.6%    4.6%  LazyCompile: *SourceNode_walk /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/source-map/lib/source-node.js:221:53
+     24    0.4%    3.0%  LazyCompile: *resolve path.js:1067:10
+     24    0.4%    3.0%  LazyCompile: *castChunk /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:52:19
+     20    0.3%    2.5%  LazyCompile: *next /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:478:32
+     18    0.3%    2.2%  LazyCompile: *compile /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+     16    0.3%    2.0%  LazyCompile: *readPackage internal/modules/cjs/loader.js:258:21
+     16    0.3%    2.0%  LazyCompile: *<anonymous> /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/source-map/lib/source-node.js:174:29
+     12    0.2%    1.5%  LazyCompile: *normalizeString path.js:59:25
+     12    0.2%    1.5%  LazyCompile: *next /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express/lib/router/index.js:176:16
+     11    0.2%    1.4%  LazyCompile: *anonymous /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:12:42
+      9    0.2%    1.1%  LazyCompile: *generateList /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:143:38
+      8    0.1%    1.0%  RegExp: (?:\r\n?|\n).*
+      7    0.1%    0.9%  RegExp: (^|\r?\n)\s*?$
+      7    0.1%    0.9%  LazyCompile: *SourceNode_add /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/source-map/lib/source-node.js:172:51
+      6    0.1%    0.7%  LazyCompile: *setupParams /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:1034:36
+      5    0.1%    0.6%  RegExp: \r?\n\s*?$
+      5    0.1%    0.6%  LazyCompile: *relative path.js:1166:11
+      5    0.1%    0.6%  LazyCompile: *extend /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/utils.js:28:16
+      5    0.1%    0.6%  LazyCompile: *WhitespaceControl.Program /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/whitespace-control.js:19:48
+      4    0.1%    0.5%  RegExp: ^(?:\{\{(~)?\s*else\s*(~)?\}\})
+      4    0.1%    0.5%  RegExp: ^(?:[^\x00]*?(?=(\{\{)))
+      4    0.1%    0.5%  LazyCompile: *setupHelperArgs /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:1104:44
+      4    0.1%    0.5%  LazyCompile: *resolvePath /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:492:36
+      4    0.1%    0.5%  LazyCompile: *renderView /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express-handlebars/lib/express-handlebars.js:183:19
+      4    0.1%    0.5%  LazyCompile: *render /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express-handlebars/lib/express-handlebars.js:150:15
+      4    0.1%    0.5%  LazyCompile: *preparePath /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/helpers.js:63:21
+      4    0.1%    0.5%  LazyCompile: *invokeAmbiguous /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:699:44
+      4    0.1%    0.5%  LazyCompile: *ambiguousSexpr /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:248:42
+      4    0.1%    0.5%  LazyCompile: *Module._nodeModulePaths internal/modules/cjs/loader.js:597:37
+      3    0.1%    0.4%  RegExp: ^\.|this\b
+      3    0.1%    0.4%  RegExp: ^(?:\{\{(~)?\*?)
+      3    0.1%    0.4%  LazyCompile: *template /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/runtime.js:52:18
+      3    0.1%    0.4%  LazyCompile: *realpathSync fs.js:1722:22
+      3    0.1%    0.4%  LazyCompile: *readFileSync fs.js:390:22
+      3    0.1%    0.4%  LazyCompile: *mergeSource /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:267:36
+      3    0.1%    0.4%  LazyCompile: *appendEscaped /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:416:40
+      3    0.1%    0.4%  LazyCompile: *Program /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:113:28
+      2    0.0%    0.2%  RegExp: ^(?:\{\{(~)?\{)
+      2    0.0%    0.2%  RegExp: ^(?:\{\{(~)?\^\s*(~)?\}\})
+      2    0.0%    0.2%  RegExp: ^(?:\{\{(~)?\^)
+      2    0.0%    0.2%  RegExp: ^(?:\s+)
+      2    0.0%    0.2%  RegExp: ^(?:\.(?=([=~}\s\/.)|])))
+      2    0.0%    0.2%  RegExp: ^(?:=)
+      2    0.0%    0.2%  RegExp: [&<>"'`=]
+      2    0.0%    0.2%  RegExp: [ \t]+$
+      2    0.0%    0.2%  LazyCompile: *quotedString /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:118:38
+      2    0.0%    0.2%  LazyCompile: *pushSource /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:881:34
+      2    0.0%    0.2%  LazyCompile: *lookupProperty /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/runtime.js:118:44
+      2    0.0%    0.2%  LazyCompile: *join path.js:1142:7
+      2    0.0%    0.2%  LazyCompile: *dirname path.js:1247:10
+      2    0.0%    0.2%  LazyCompile: *classifySexpr /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:363:40
+      2    0.0%    0.2%  LazyCompile: *anonymous /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:549:49
+      2    0.0%    0.2%  LazyCompile: *accept /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:101:26
+      2    0.0%    0.2%  LazyCompile: *SourceNode /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/source-map/lib/source-node.js:35:20
+      2    0.0%    0.2%  LazyCompile: *PathExpression /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:289:42
+      2    0.0%    0.2%  LazyCompile: *<anonymous> /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:235:48
+      2    0.0%    0.2%  LazyCompile: *<anonymous> /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:130:39
+      1    0.0%    0.1%  RegExp: ^[!#$%&'*+.^_`|~0-9A-Za-z-]+\/[!#$%&'*+.^_`|~0-9A-Za-z-]+$
+      1    0.0%    0.1%  RegExp: ^[!#$%&'*+.^_`|~0-9A-Za-z-]+$
+      1    0.0%    0.1%  RegExp: ^(?:true(?=([~}\s)])))
+      1    0.0%    0.1%  RegExp: ^(?:null(?=([~}\s)])))
+      1    0.0%    0.1%  RegExp: ^(?:false(?=([~}\s)])))
+      1    0.0%    0.1%  RegExp: ^(?:\|)
+      1    0.0%    0.1%  RegExp: ^(?:\{\{(~)?\/)
+      1    0.0%    0.1%  RegExp: ^(?:\{\{(~)?>)
+      1    0.0%    0.1%  RegExp: ^(?:\{\{(~)?!--)
+      1    0.0%    0.1%  RegExp: ^(?:\.\.)
+      1    0.0%    0.1%  RegExp: \{(?:(?!\{).)*\}
+      1    0.0%    0.1%  RegExp: [^\t\x20-\x7e\x80-\xff]
+      1    0.0%    0.1%  RegExp: ;\s*charset\s*=
+      1    0.0%    0.1%  RegExp: (?:^|\/)\.?\.$
+      1    0.0%    0.1%  LazyCompile: *yy.locInfo /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/base.js:42:25
+      1    0.0%    0.1%  LazyCompile: *stat internal/modules/cjs/loader.js:146:14
+      1    0.0%    0.1%  LazyCompile: *replaceStack /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:892:38
+      1    0.0%    0.1%  LazyCompile: *readPackageScope internal/modules/cjs/loader.js:289:26
+      1    0.0%    0.1%  LazyCompile: *processTicksAndRejections internal/process/task_queues.js:67:35
+      1    0.0%    0.1%  LazyCompile: *opcode /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:347:26
+      1    0.0%    0.1%  LazyCompile: *normalize path.js:1103:12
+      1    0.0%    0.1%  LazyCompile: *functionCall /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:113:38
+      1    0.0%    0.1%  LazyCompile: *formatWithOptionsInternal internal/util/inspect.js:1864:35
+      1    0.0%    0.1%  LazyCompile: *extname path.js:1357:10
+      1    0.0%    0.1%  LazyCompile: *compile /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:63:28
+      1    0.0%    0.1%  LazyCompile: *blockParamIndex /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:461:44
+      1    0.0%    0.1%  LazyCompile: *appendToBuffer /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:42:42
+      1    0.0%    0.1%  LazyCompile: *appendContent /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:375:40
+      1    0.0%    0.1%  LazyCompile: *accept /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/visitor.js:57:26
+      1    0.0%    0.1%  LazyCompile: *_addListener events.js:428:22
+      1    0.0%    0.1%  LazyCompile: *SourceNode_prepend /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/source-map/lib/source-node.js:197:59
+      1    0.0%    0.1%  LazyCompile: *Module.load internal/modules/cjs/loader.js:938:33
+      1    0.0%    0.1%  LazyCompile: *Module._compile internal/modules/cjs/loader.js:1039:37
+      1    0.0%    0.1%  LazyCompile: *<anonymous> /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/runtime.js:360:47
+
+ [C++]:
+   ticks  total  nonlib   name
+    116    2.0%   14.3%  epoll_pwait
+     66    1.1%    8.1%  __write
+     25    0.4%    3.1%  syscall
+     17    0.3%    2.1%  fwrite
+     16    0.3%    2.0%  __libc_malloc
+      9    0.2%    1.1%  cfree
+      9    0.2%    1.1%  __pthread_cond_timedwait
+      9    0.2%    1.1%  __libc_read
+      7    0.1%    0.9%  std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)
+      5    0.1%    0.6%  __libc_open
+      4    0.1%    0.5%  operator new(unsigned long)
+      4    0.1%    0.5%  __pthread_cond_signal
+      3    0.1%    0.4%  __mmap
+      3    0.1%    0.4%  __GI___pthread_getspecific
+      2    0.0%    0.2%  std::ostream::sentry::sentry(std::ostream&)
+      2    0.0%    0.2%  std::ostream& std::ostream::_M_insert<long>(long)
+      2    0.0%    0.2%  operator new[](unsigned long)
+      2    0.0%    0.2%  operator delete(void*)
+      2    0.0%    0.2%  __munmap
+      2    0.0%    0.2%  __mprotect
+      2    0.0%    0.2%  __lll_lock_wait
+      1    0.0%    0.1%  std::ostream::put(char)
+      1    0.0%    0.1%  std::locale::id::_M_id() const
+      1    0.0%    0.1%  std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)
+      1    0.0%    0.1%  sigemptyset
+      1    0.0%    0.1%  posix_memalign
+      1    0.0%    0.1%  operator delete[](void*)
+      1    0.0%    0.1%  fputc
+      1    0.0%    0.1%  epoll_ctl
+      1    0.0%    0.1%  do_futex_wait.constprop.0
+      1    0.0%    0.1%  bool std::has_facet<std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > > >(std::locale const&)
+      1    0.0%    0.1%  __madvise
+      1    0.0%    0.1%  __errno_location
+      1    0.0%    0.1%  __clock_gettime
+      1    0.0%    0.1%  __GI___pthread_mutex_unlock
+      1    0.0%    0.1%  _IO_file_xsputn
+
+ [Summary]:
+   ticks  total  nonlib   name
+    477    8.3%   58.9%  JavaScript
+    322    5.6%   39.8%  C++
+    151    2.6%   18.6%  GC
+   4960   86.0%          Shared libraries
+     11    0.2%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+     53   35.6%    0.9%  __write
+     25   16.8%    0.4%  syscall
+     14    9.4%    0.2%  __libc_malloc
+     13    8.7%    0.2%  fwrite
+      7    4.7%    0.1%  cfree
+      6    4.0%    0.1%  std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)
+      5    3.4%    0.1%  __libc_open
+      4    2.7%    0.1%  operator new(unsigned long)
+      3    2.0%    0.1%  __GI___pthread_getspecific
+      2    1.3%    0.0%  std::ostream::sentry::sentry(std::ostream&)
+      2    1.3%    0.0%  operator new[](unsigned long)
+      2    1.3%    0.0%  operator delete(void*)
+      2    1.3%    0.0%  __libc_read
+      1    0.7%    0.0%  std::ostream& std::ostream::_M_insert<long>(long)
+      1    0.7%    0.0%  std::locale::id::_M_id() const
+      1    0.7%    0.0%  posix_memalign
+      1    0.7%    0.0%  operator delete[](void*)
+      1    0.7%    0.0%  fputc
+      1    0.7%    0.0%  bool std::has_facet<std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > > >(std::locale const&)
+      1    0.7%    0.0%  __mprotect
+      1    0.7%    0.0%  __mmap
+      1    0.7%    0.0%  __madvise
+      1    0.7%    0.0%  __clock_gettime
+      1    0.7%    0.0%  _IO_file_xsputn
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+   4852   84.1%  /usr/bin/node
+   2471   50.9%    /usr/bin/node
+    310   12.5%      LazyCompile: ~wrapSafe internal/modules/cjs/loader.js:986:18
+    310  100.0%        LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1039:37
+    310  100.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1094:37
+    279   90.0%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:938:33
+     31   10.0%            LazyCompile: *Module._load internal/modules/cjs/loader.js:725:24
+    136    5.5%      LazyCompile: ~memoryUsage internal/process/per_thread.js:158:23
+    136  100.0%        LazyCompile: ~GenerarInfo /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/server.js:295:21
+    136  100.0%          LazyCompile: ~handle /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express/lib/router/layer.js:86:49
+    136  100.0%            LazyCompile: ~next /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express/lib/router/route.js:114:16
+    116    4.7%      /usr/bin/node
+      8    6.9%        LazyCompile: ~readPackage internal/modules/cjs/loader.js:258:21
+      8  100.0%          LazyCompile: ~readPackageScope internal/modules/cjs/loader.js:289:26
+      6   75.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1094:37
+      2   25.0%            LazyCompile: ~trySelf internal/modules/cjs/loader.js:409:17
+      8    6.9%        LazyCompile: ~asString /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/date-format/lib/index.js:29:18
+      8  100.0%          LazyCompile: ~timestampLevelAndCategory /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/log4js/lib/layouts.js:41:35
+      8  100.0%            LazyCompile: ~colouredLayout /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/log4js/lib/layouts.js:70:24
+      5    4.3%        LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:462:28
+      5  100.0%          LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:816:35
+      5  100.0%            LazyCompile: ~Module._load internal/modules/cjs/loader.js:725:24
+      5    4.3%        LazyCompile: ~FastBuffer internal/buffer.js:957:14
+      5  100.0%          LazyCompile: ~createUnsafeBuffer buffer.js:153:28
+      2   40.0%            LazyCompile: ~createPool buffer.js:162:20
+      2   40.0%            LazyCompile: ~allocUnsafeSlow buffer.js:396:50
+      1   20.0%            LazyCompile: ~allocate buffer.js:411:18
+      4    3.4%        LazyCompile: ~header /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express/lib/response.js:759:29
+      3   75.0%          LazyCompile: ~contentType /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express/lib/response.js:599:32
+      3  100.0%            LazyCompile: ~send /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express/lib/response.js:107:25
+      1   25.0%          LazyCompile: ~send /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express/lib/response.js:107:25
+      1  100.0%            LazyCompile: ~done /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express/lib/response.js:1011:27
+      4    3.4%        LazyCompile: ~expressInit /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express/lib/middleware/init.js:29:30
+      3   75.0%          LazyCompile: ~handle /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express/lib/router/layer.js:86:49
+      3  100.0%            LazyCompile: ~trim_prefix /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express/lib/router/index.js:288:23
+      1   25.0%          LazyCompile: *trim_prefix /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express/lib/router/index.js:288:23
+      1  100.0%            LazyCompile: *next /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express/lib/router/index.js:176:16
+      4    3.4%        LazyCompile: *quotedString /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:118:38
+      3   75.0%          LazyCompile: ~pushSource /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:881:34
+      2   66.7%            LazyCompile: ~appendEscaped /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:416:40
+      1   33.3%            LazyCompile: ~append /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:394:26
+      1   25.0%          LazyCompile: *compile /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      1  100.0%            LazyCompile: *compile /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      3    2.6%        LazyCompile: ~pipe /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/send/index.js:510:43
+      3  100.0%          LazyCompile: ~serveStatic /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/serve-static/index.js:72:31
+      2   66.7%            LazyCompile: *trim_prefix /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express/lib/router/index.js:288:23
+      1   33.3%            LazyCompile: ~handle /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express/lib/router/layer.js:86:49
+      3    2.6%        LazyCompile: ~next /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:478:32
+      3  100.0%          LazyCompile: ~lex /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:525:30
+      3  100.0%            LazyCompile: ~lex /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:295:25
+      3    2.6%        LazyCompile: ~isIPv6 internal/net.js:35:16
+      3  100.0%          LazyCompile: ~isIP internal/net.js:39:14
+      2   66.7%            LazyCompile: ~parseSslOptions /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongodb/lib/cmap/connect.js:228:25
+      1   33.3%            LazyCompile: ~lookupAndConnect net.js:995:26
+      3    2.6%        LazyCompile: ~Module.load internal/modules/cjs/loader.js:938:33
+      3  100.0%          LazyCompile: ~Module._load internal/modules/cjs/loader.js:725:24
+      3  100.0%            LazyCompile: ~Module.require internal/modules/cjs/loader.js:966:36
+      3    2.6%        LazyCompile: *stat internal/modules/cjs/loader.js:146:14
+      2   66.7%          LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:462:28
+      2  100.0%            LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:816:35
+      1   33.3%          LazyCompile: ~tryFile internal/modules/cjs/loader.js:352:17
+      1  100.0%            LazyCompile: ~tryExtensions internal/modules/cjs/loader.js:368:23
+      2    1.7%        LazyCompile: ~wrapSafe internal/modules/cjs/loader.js:986:18
+      2  100.0%          LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1039:37
+      2  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1094:37
+      2    1.7%        LazyCompile: ~readPackageScope internal/modules/cjs/loader.js:289:26
+      2  100.0%          LazyCompile: ~trySelf internal/modules/cjs/loader.js:409:17
+      2  100.0%            LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:816:35
+      2    1.7%        LazyCompile: ~mergeSource /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:267:36
+      1   50.0%          LazyCompile: ~createFunctionContext /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:216:56
+      1  100.0%            LazyCompile: ~compile /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      1   50.0%          LazyCompile: *compile /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      1  100.0%            LazyCompile: *compile /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      2    1.7%        LazyCompile: ~match /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express/lib/router/layer.js:110:39
+      2  100.0%          LazyCompile: ~matchLayer /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express/lib/router/index.js:578:20
+      2  100.0%            LazyCompile: ~next /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express/lib/router/index.js:176:16
+      2    1.7%        LazyCompile: ~finish /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/glob/common.js:118:17
+      2  100.0%          LazyCompile: ~Glob._finish /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/glob/glob.js:185:35
+      2  100.0%            LazyCompile: ~done /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/glob/glob.js:171:17
+      2    1.7%        LazyCompile: *pushSource /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:881:34
+      1   50.0%          LazyCompile: ~appendEscaped /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:416:40
+      1  100.0%            LazyCompile: *compile /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      1   50.0%          LazyCompile: ~append /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:394:26
+      1  100.0%            LazyCompile: *compile /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      2    1.7%        LazyCompile: *parse /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/minimatch/minimatch.js:299:16
+      2  100.0%          /usr/bin/node
+      2  100.0%            LazyCompile: ~<anonymous> /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/minimatch/minimatch.js:201:26
+      2    1.7%        LazyCompile: *appendEscaped /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:416:40
+      2  100.0%          LazyCompile: *compile /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      1   50.0%            LazyCompile: *render /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express-handlebars/lib/express-handlebars.js:150:15
+      1   50.0%            LazyCompile: *compile /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+     84    3.4%      LazyCompile: *compile /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+     36   42.9%        LazyCompile: *compile /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+     18   50.0%          LazyCompile: *compile /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+     12   66.7%            LazyCompile: *render /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express-handlebars/lib/express-handlebars.js:150:15
+      6   33.3%            LazyCompile: ~compileInput /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:507:24
+      9   25.0%          LazyCompile: ~compileInput /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:507:24
+      9  100.0%            LazyCompile: ~ret /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:515:15
+      9   25.0%          LazyCompile: *render /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express-handlebars/lib/express-handlebars.js:150:15
+      9  100.0%            /usr/bin/node
+     29   34.5%        LazyCompile: *render /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express-handlebars/lib/express-handlebars.js:150:15
+     29  100.0%          /usr/bin/node
+     19   22.6%        LazyCompile: ~compileInput /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:507:24
+     19  100.0%          LazyCompile: ~ret /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:515:15
+     19  100.0%            LazyCompile: ~_renderTemplate /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express-handlebars/lib/express-handlebars.js:260:18
+     80    3.2%      LazyCompile: *SourceNode_walk /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/source-map/lib/source-node.js:221:53
+     72   90.0%        LazyCompile: *SourceNode_walk /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/source-map/lib/source-node.js:221:53
+     72  100.0%          LazyCompile: *SourceNode_walk /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/source-map/lib/source-node.js:221:53
+     67   93.1%            LazyCompile: *SourceNode_walk /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/source-map/lib/source-node.js:221:53
+      5    6.9%            LazyCompile: ~SourceNode_toString /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/source-map/lib/source-node.js:318:61
+      8   10.0%        LazyCompile: ~SourceNode_toString /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/source-map/lib/source-node.js:318:61
+      8  100.0%          /usr/bin/node
+      5   62.5%            LazyCompile: *compile /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      3   37.5%            LazyCompile: ~createFunctionContext /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:216:56
+     58    2.3%      LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+     53   91.4%        LazyCompile: ~nativeModuleRequire internal/bootstrap/loaders.js:306:29
+      6   11.3%          Eval: ~<anonymous> internal/bootstrap/node.js:1:1
+      3    5.7%          Eval: ~<anonymous> stream.js:1:1
+      3  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      3    5.7%          Eval: ~<anonymous> internal/source_map/source_map_cache.js:1:1
+      3  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      3    5.7%          Eval: ~<anonymous> internal/child_process.js:1:1
+      3  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      3    5.7%          Eval: ~<anonymous> crypto.js:1:1
+      3  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      2    3.8%          LazyCompile: ~setupPrepareStackTrace internal/bootstrap/node.js:254:32
+      2  100.0%            Eval: ~<anonymous> internal/bootstrap/node.js:1:1
+      2    3.8%          Eval: ~<anonymous> internal/process/task_queues.js:1:1
+      2  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      2    3.8%          Eval: ~<anonymous> internal/cluster/master.js:1:1
+      2  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      2    3.8%          Eval: ~<anonymous> http.js:1:1
+      2  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      2    3.8%          Eval: ~<anonymous> fs.js:1:1
+      2  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      2    3.8%          Eval: ~<anonymous> events.js:1:1
+      2  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      2    3.8%          Eval: ~<anonymous> child_process.js:1:1
+      2  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    1.9%          LazyCompile: ~setupProcessObject internal/bootstrap/node.js:273:28
+      1  100.0%            Eval: ~<anonymous> internal/bootstrap/node.js:1:1
+      1    1.9%          LazyCompile: ~setupInspectorHooks internal/bootstrap/pre_execution.js:214:29
+      1  100.0%            LazyCompile: ~prepareMainThreadExecution internal/bootstrap/pre_execution.js:21:36
+      1    1.9%          LazyCompile: ~setupBuffer internal/bootstrap/node.js:302:21
+      1  100.0%            Eval: ~<anonymous> internal/bootstrap/node.js:1:1
+      1    1.9%          LazyCompile: ~lazyLoadStreams fs.js:2064:25
+      1  100.0%            LazyCompile: ~get ReadStream fs.js:2172:17
+      1    1.9%          LazyCompile: ~initializeCJSLoader internal/bootstrap/pre_execution.js:427:29
+      1  100.0%            LazyCompile: ~prepareMainThreadExecution internal/bootstrap/pre_execution.js:21:36
+      1    1.9%          Eval: ~<anonymous> tty.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    1.9%          Eval: ~<anonymous> tls.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    1.9%          Eval: ~<anonymous> internal/util/inspect.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    1.9%          Eval: ~<anonymous> internal/url.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    1.9%          Eval: ~<anonymous> internal/timers.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    1.9%          Eval: ~<anonymous> internal/process/per_thread.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    1.9%          Eval: ~<anonymous> internal/process/esm_loader.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    1.9%          Eval: ~<anonymous> internal/modules/esm/translators.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    1.9%          Eval: ~<anonymous> internal/modules/esm/loader.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    1.9%          Eval: ~<anonymous> internal/modules/esm/get_source.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    1.9%          Eval: ~<anonymous> internal/crypto/keygen.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    1.9%          Eval: ~<anonymous> internal/console/global.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    1.9%          Eval: ~<anonymous> internal/blob.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    1.9%          Eval: ~<anonymous> https.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    1.9%          Eval: ~<anonymous> buffer.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    1.9%          Eval: ~<anonymous> assert.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      5    8.6%        LazyCompile: ~compileForPublicLoader internal/bootstrap/loaders.js:220:25
+      5  100.0%          LazyCompile: ~loadNativeModule internal/modules/cjs/helpers.js:43:26
+      5  100.0%            LazyCompile: ~Module._load internal/modules/cjs/loader.js:725:24
+     53    2.1%      LazyCompile: ~writevGeneric internal/stream_base_commons.js:118:23
+     53  100.0%        LazyCompile: ~Socket._writeGeneric net.js:772:42
+     53  100.0%          LazyCompile: ~Socket._writev net.js:804:36
+     53  100.0%            LazyCompile: ~doWrite internal/streams/writable.js:367:17
+     47    1.9%      LazyCompile: *next /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:478:32
+     44   93.6%        LazyCompile: *parse /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:269:30
+     44  100.0%          LazyCompile: ~parseWithoutProcessing /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/base.js:33:32
+     28   63.6%            LazyCompile: ~parse /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/base.js:51:15
+     16   36.4%            LazyCompile: *render /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express-handlebars/lib/express-handlebars.js:150:15
+      3    6.4%        LazyCompile: ~lex /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:525:30
+      3  100.0%          LazyCompile: *parse /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:269:30
+      3  100.0%            LazyCompile: ~parseWithoutProcessing /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/base.js:33:32
+     34    1.4%      LazyCompile: ~authenticate /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/passport/lib/middleware/authenticate.js:94:31
+     25   73.5%        LazyCompile: ~handle /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express/lib/router/layer.js:86:49
+     25  100.0%          LazyCompile: ~trim_prefix /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express/lib/router/index.js:288:23
+     24   96.0%            LazyCompile: *next /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express/lib/router/index.js:176:16
+      1    4.0%            LazyCompile: ~<anonymous> /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express/lib/router/index.js:275:64
+      9   26.5%        LazyCompile: *trim_prefix /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express/lib/router/index.js:288:23
+      9  100.0%          LazyCompile: *next /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express/lib/router/index.js:176:16
+      9  100.0%            LazyCompile: ~initialize /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/passport/lib/middleware/initialize.js:51:29
+     33    1.3%      LazyCompile: ~session /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express-session/index.js:179:26
+     23   69.7%        LazyCompile: ~handle /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express/lib/router/layer.js:86:49
+     23  100.0%          LazyCompile: ~trim_prefix /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express/lib/router/index.js:288:23
+     17   73.9%            LazyCompile: *next /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express/lib/router/index.js:176:16
+      6   26.1%            LazyCompile: ~<anonymous> /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express/lib/router/index.js:275:64
+     10   30.3%        LazyCompile: *trim_prefix /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express/lib/router/index.js:288:23
+     10  100.0%          LazyCompile: *next /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express/lib/router/index.js:176:16
+     10  100.0%            LazyCompile: ~logAllRequest /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/server.js:80:23
+     33    1.3%      LazyCompile: *setupHelperArgs /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:1104:44
+     23   69.7%        LazyCompile: *invokeAmbiguous /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:699:44
+     23  100.0%          LazyCompile: *compile /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+     15   65.2%            LazyCompile: *render /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express-handlebars/lib/express-handlebars.js:150:15
+      5   21.7%            LazyCompile: *compile /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      3   13.0%            LazyCompile: ~compileInput /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:507:24
+     10   30.3%        LazyCompile: *setupHelper /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:1020:36
+     10  100.0%          LazyCompile: ~invokeKnownHelper /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:682:48
+     10  100.0%            LazyCompile: *compile /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+     27    1.1%      LazyCompile: *quotedString /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:118:38
+     17   63.0%        LazyCompile: *compile /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+     12   70.6%          LazyCompile: *compile /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+     10   83.3%            LazyCompile: *compile /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      1    8.3%            LazyCompile: ~compileInput /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:507:24
+      1    8.3%            LazyCompile: *render /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express-handlebars/lib/express-handlebars.js:150:15
+      4   23.5%          LazyCompile: *render /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express-handlebars/lib/express-handlebars.js:150:15
+      4  100.0%            /usr/bin/node
+      1    5.9%          LazyCompile: ~compileInput /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:507:24
+      1  100.0%            LazyCompile: ~ret /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:515:15
+     10   37.0%        LazyCompile: ~pushSource /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:881:34
+      5   50.0%          LazyCompile: ~append /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:394:26
+      5  100.0%            LazyCompile: *compile /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      3   30.0%          LazyCompile: ~appendEscaped /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:416:40
+      3  100.0%            LazyCompile: *compile /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      2   20.0%          LazyCompile: ~compile /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      1   50.0%            LazyCompile: ~compileInput /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:507:24
+      1   50.0%            LazyCompile: ~compileChildren /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:805:44
+     27    1.1%      LazyCompile: *castChunk /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:52:19
+     20   74.1%        LazyCompile: *generateList /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:143:38
+     11   55.0%          LazyCompile: *setupHelperArgs /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:1104:44
+      8   72.7%            LazyCompile: *invokeAmbiguous /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:699:44
+      3   27.3%            LazyCompile: *setupHelper /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:1020:36
+      7   35.0%          LazyCompile: ~objectLiteral /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:123:40
+      7  100.0%            LazyCompile: ~objectLiteral /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:1002:40
+      2   10.0%          LazyCompile: *objectLiteral /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:123:40
+      2  100.0%            LazyCompile: ~objectLiteral /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:1002:40
+      6   22.2%        LazyCompile: *wrap /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:101:22
+      4   66.7%          LazyCompile: *invokeAmbiguous /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:699:44
+      4  100.0%            LazyCompile: *compile /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      2   33.3%          LazyCompile: *push /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:868:22
+      2  100.0%            LazyCompile: ~invokeAmbiguous /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:699:44
+      1    3.7%        LazyCompile: ~generateList /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:143:38
+      1  100.0%          LazyCompile: ~objectLiteral /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:123:40
+      1  100.0%            LazyCompile: ~objectLiteral /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:1002:40
+     26    1.1%      LazyCompile: ~Hash internal/crypto/hash.js:37:14
+     26  100.0%        LazyCompile: ~createHash crypto.js:113:20
+     14   53.8%          LazyCompile: ~hash /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express-session/index.js:596:14
+     12   85.7%            LazyCompile: ~generate /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express-session/index.js:363:22
+      2   14.3%            LazyCompile: ~isModified /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express-session/index.js:425:24
+     12   46.2%          LazyCompile: ~entitytag /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/etag/index.js:39:20
+     12  100.0%            LazyCompile: ~etag /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/etag/index.js:70:15
+     62    1.3%    LazyCompile: *Module._compile internal/modules/cjs/loader.js:1039:37
+     62  100.0%      LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1094:37
+     43   69.4%        LazyCompile: *Module.load internal/modules/cjs/loader.js:938:33
+     43  100.0%          LazyCompile: ~Module._load internal/modules/cjs/loader.js:725:24
+     43  100.0%            LazyCompile: ~Module.require internal/modules/cjs/loader.js:966:36
+     19   30.6%        LazyCompile: ~Module.load internal/modules/cjs/loader.js:938:33
+     19  100.0%          LazyCompile: ~Module._load internal/modules/cjs/loader.js:725:24
+     19  100.0%            LazyCompile: ~Module.require internal/modules/cjs/loader.js:966:36
+     57    1.2%    LazyCompile: *SourceNode_walk /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/source-map/lib/source-node.js:221:53
+     54   94.7%      LazyCompile: *SourceNode_walk /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/source-map/lib/source-node.js:221:53
+     50   92.6%        LazyCompile: *SourceNode_walk /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/source-map/lib/source-node.js:221:53
+     41   82.0%          LazyCompile: *SourceNode_walk /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/source-map/lib/source-node.js:221:53
+     32   78.0%            LazyCompile: *SourceNode_walk /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/source-map/lib/source-node.js:221:53
+      9   22.0%            LazyCompile: ~SourceNode_toString /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/source-map/lib/source-node.js:318:61
+      9   18.0%          LazyCompile: ~SourceNode_toString /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/source-map/lib/source-node.js:318:61
+      9  100.0%            /usr/bin/node
+      4    7.4%        LazyCompile: ~SourceNode_toString /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/source-map/lib/source-node.js:318:61
+      4  100.0%          /usr/bin/node
+      4  100.0%            LazyCompile: *compile /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      3    5.3%      LazyCompile: ~SourceNode_toString /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/source-map/lib/source-node.js:318:61
+      3  100.0%        /usr/bin/node
+      3  100.0%          LazyCompile: *compile /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      3  100.0%            LazyCompile: *render /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express-handlebars/lib/express-handlebars.js:150:15
+
+    116    2.0%  epoll_pwait
+
+     99    1.7%  /lib/x86_64-linux-gnu/libc-2.31.so
+     74   74.7%    /usr/bin/node
+     22   29.7%      /usr/bin/node
+      5   22.7%        LazyCompile: *quotedString /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:118:38
+      3   60.0%          LazyCompile: ~pushSource /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:881:34
+      3  100.0%            LazyCompile: ~append /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:394:26
+      2   40.0%          LazyCompile: *compile /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      1   50.0%            LazyCompile: ~compileInput /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:507:24
+      1   50.0%            LazyCompile: *compile /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      2    9.1%        LazyCompile: *setupHelperArgs /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:1104:44
+      2  100.0%          LazyCompile: *invokeAmbiguous /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:699:44
+      2  100.0%            LazyCompile: *compile /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      1    4.5%        LazyCompile: ~prepareMustache /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/helpers.js:99:25
+      1  100.0%          LazyCompile: *anonymous /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:12:42
+      1  100.0%            LazyCompile: *parse /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:269:30
+      1    4.5%        LazyCompile: ~o /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/yargs/build/index.cjs:1:912
+      1  100.0%          LazyCompile: ~h /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/yargs/build/index.cjs:1:1423
+      1  100.0%            LazyCompile: ~addHelpOpt /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/yargs/build/index.cjs:1:27910
+      1    4.5%        LazyCompile: ~mergeSource /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:267:36
+      1  100.0%          LazyCompile: *compile /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      1  100.0%            LazyCompile: *compile /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      1    4.5%        LazyCompile: ~header /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express/lib/response.js:759:29
+      1  100.0%          LazyCompile: ~send /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express/lib/response.js:107:25
+      1  100.0%            LazyCompile: *renderView /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express-handlebars/lib/express-handlebars.js:183:19
+      1    4.5%        LazyCompile: ~createSecureContext _tls_common.js:95:59
+      1  100.0%          LazyCompile: ~connect _tls_wrap.js:1582:35
+      1  100.0%            LazyCompile: ~makeConnection /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongodb/lib/cmap/connect.js:247:24
+      1    4.5%        LazyCompile: ~clearIncoming _http_server.js:722:23
+      1  100.0%          LazyCompile: ~resOnFinish _http_server.js:764:21
+      1  100.0%            LazyCompile: *emit events.js:349:44
+      1    4.5%        LazyCompile: ~asString /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/date-format/lib/index.js:29:18
+      1  100.0%          LazyCompile: ~timestampLevelAndCategory /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/log4js/lib/layouts.js:41:35
+      1  100.0%            LazyCompile: ~colouredLayout /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/log4js/lib/layouts.js:70:24
+      1    4.5%        LazyCompile: ~_renderTemplate /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express-handlebars/lib/express-handlebars.js:260:18
+      1  100.0%          LazyCompile: ~render /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express-handlebars/lib/express-handlebars.js:150:15
+      1  100.0%            /usr/bin/node
+      1    4.5%        LazyCompile: ~Module.load internal/modules/cjs/loader.js:938:33
+      1  100.0%          LazyCompile: ~Module._load internal/modules/cjs/loader.js:725:24
+      1  100.0%            LazyCompile: ~Module.require internal/modules/cjs/loader.js:966:36
+      1    4.5%        LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:462:28
+      1  100.0%          LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:816:35
+      1  100.0%            LazyCompile: ~Module._load internal/modules/cjs/loader.js:725:24
+      1    4.5%        LazyCompile: ~FastBuffer internal/buffer.js:957:14
+      1  100.0%          LazyCompile: ~createUnsafeBuffer buffer.js:153:28
+      1  100.0%            LazyCompile: ~allocate buffer.js:411:18
+      1    4.5%        LazyCompile: ~CaseInsensitiveMap /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongodb/lib/connection_string.js:195:16
+      1  100.0%          Eval: ~<anonymous> /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongodb/lib/connection_string.js:1:1
+      1  100.0%            LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1039:37
+      1    4.5%        LazyCompile: *pushSource /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:881:34
+      1  100.0%          LazyCompile: ~append /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:394:26
+      1  100.0%            LazyCompile: *compile /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      1    4.5%        LazyCompile: *parse /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:269:30
+      1  100.0%          LazyCompile: ~parseWithoutProcessing /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/base.js:33:32
+      1  100.0%            LazyCompile: *render /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express-handlebars/lib/express-handlebars.js:150:15
+      1    4.5%        LazyCompile: *Module._compile internal/modules/cjs/loader.js:1039:37
+      1  100.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1094:37
+      1  100.0%            LazyCompile: *Module.load internal/modules/cjs/loader.js:938:33
+      7    9.5%      LazyCompile: *compile /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      5   71.4%        LazyCompile: *render /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express-handlebars/lib/express-handlebars.js:150:15
+      5  100.0%          /usr/bin/node
+      2   28.6%        LazyCompile: ~compileInput /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:507:24
+      2  100.0%          LazyCompile: ~ret /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:515:15
+      2  100.0%            LazyCompile: ~_renderTemplate /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express-handlebars/lib/express-handlebars.js:260:18
+      5    6.8%      LazyCompile: ~Module._load internal/modules/cjs/loader.js:725:24
+      5  100.0%        LazyCompile: ~Module.require internal/modules/cjs/loader.js:966:36
+      5  100.0%          LazyCompile: ~require internal/modules/cjs/helpers.js:100:31
+      1   20.0%            Eval: ~<anonymous> /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongodb/lib/cmap/auth/mongocr.js:1:1
+      1   20.0%            Eval: ~<anonymous> /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/knex/lib/migrations/migrate/Migrator.js:1:1
+      1   20.0%            Eval: ~<anonymous> /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/knex/lib/execution/transaction.js:1:1
+      1   20.0%            Eval: ~<anonymous> /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/faker/lib/locales/ro/index.js:1:1
+      1   20.0%            Eval: ~<anonymous> /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/faker/lib/locales/en_IND/index.js:1:1
+      4    5.4%      LazyCompile: ~render /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express-handlebars/lib/express-handlebars.js:150:15
+      3   75.0%        /usr/bin/node
+      1   25.0%        LazyCompile: ~renderView /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express-handlebars/lib/express-handlebars.js:183:19
+      1  100.0%          /usr/bin/node
+      4    5.4%      LazyCompile: ~createFunctionContext /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:216:56
+      4  100.0%        LazyCompile: ~compile /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      2   50.0%          LazyCompile: ~compileInput /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:507:24
+      2  100.0%            LazyCompile: ~ret /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:515:15
+      2   50.0%          LazyCompile: ~compileChildren /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:805:44
+      2  100.0%            LazyCompile: ~compile /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      4    5.4%      LazyCompile: *realpathSync fs.js:1722:22
+      2   50.0%        LazyCompile: ~toRealPath internal/modules/cjs/loader.js:361:20
+      2  100.0%          LazyCompile: ~tryFile internal/modules/cjs/loader.js:352:17
+      1   50.0%            LazyCompile: ~tryPackage internal/modules/cjs/loader.js:306:20
+      1   50.0%            LazyCompile: ~tryExtensions internal/modules/cjs/loader.js:368:23
+      2   50.0%        LazyCompile: *tryExtensions internal/modules/cjs/loader.js:368:23
+      1   50.0%          LazyCompile: ~tryPackage internal/modules/cjs/loader.js:306:20
+      1  100.0%            LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:462:28
+      1   50.0%          LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:462:28
+      1  100.0%            LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:816:35
+      2    2.7%      LazyCompile: *readPackage internal/modules/cjs/loader.js:258:21
+      2  100.0%        LazyCompile: *readPackageScope internal/modules/cjs/loader.js:289:26
+      2  100.0%          LazyCompile: ~trySelf internal/modules/cjs/loader.js:409:17
+      2  100.0%            LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:816:35
+      1    1.4%      LazyCompile: ~store.generate /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express-session/index.js:158:28
+      1  100.0%        LazyCompile: ~generate /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express-session/index.js:363:22
+      1  100.0%          LazyCompile: ~session /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express-session/index.js:179:26
+      1  100.0%            LazyCompile: *trim_prefix /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express/lib/router/index.js:288:23
+      1    1.4%      LazyCompile: ~serializeInto /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/bson/lib/parser/serializer.js:550:23
+      1  100.0%        LazyCompile: ~serializeObject /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/bson/lib/parser/serializer.js:258:25
+      1  100.0%          LazyCompile: ~serializeInto /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/bson/lib/parser/serializer.js:550:23
+      1  100.0%            LazyCompile: ~serializeObject /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/bson/lib/parser/serializer.js:258:25
+      1    1.4%      LazyCompile: ~parseWithoutProcessing /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/base.js:33:32
+      1  100.0%        LazyCompile: ~parse /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/base.js:51:15
+      1  100.0%          LazyCompile: ~compileInput /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:507:24
+      1  100.0%            LazyCompile: ~ret /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:515:15
+      1    1.4%      LazyCompile: ~ownProp /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/glob/common.js:9:18
+      1  100.0%        LazyCompile: ~Glob._readdir /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/glob/glob.js:522:36
+      1  100.0%          LazyCompile: ~Glob._processGlobStar /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/glob/glob.js:620:44
+      1  100.0%            LazyCompile: ~Glob._process /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/glob/glob.js:295:36
+      1    1.4%      LazyCompile: ~hash /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express-session/index.js:596:14
+      1  100.0%        LazyCompile: ~generate /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express-session/index.js:363:22
+      1  100.0%          LazyCompile: ~session /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express-session/index.js:179:26
+      1  100.0%            LazyCompile: ~handle /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express/lib/router/layer.js:86:49
+      1    1.4%      LazyCompile: ~forEachOwnPropertyName /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/merge-descriptors/index.js:48:74
+      1  100.0%        /usr/bin/node
+      1  100.0%          LazyCompile: ~merge /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/merge-descriptors/index.js:34:15
+      1  100.0%            LazyCompile: ~createApplication /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express/lib/express.js:37:27
+      1    1.4%      LazyCompile: ~doWrite internal/streams/writable.js:367:17
+      1  100.0%        LazyCompile: ~clearBuffer internal/streams/writable.js:493:21
+      1  100.0%          LazyCompile: ~Writable.uncork internal/streams/writable.js:310:37
+      1  100.0%            LazyCompile: ~end _http_outgoing.js:795:45
+      1    1.4%      LazyCompile: ~create /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/connect-mongo/build/main/lib/MongoStore.js:135:18
+      1  100.0%        Eval: ~<anonymous> /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/server.js:1:1
+      1  100.0%          LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1039:37
+      1  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1094:37
+      1    1.4%      LazyCompile: ~asString /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/date-format/lib/index.js:29:18
+      1  100.0%        LazyCompile: ~timestampLevelAndCategory /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/log4js/lib/layouts.js:41:35
+      1  100.0%          LazyCompile: ~colouredLayout /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/log4js/lib/layouts.js:70:24
+      1  100.0%            LazyCompile: ~<anonymous> /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/log4js/lib/appenders/console.js:5:10
+      1    1.4%      LazyCompile: ~applySession /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongodb/lib/sessions.js:628:22
+      1  100.0%        LazyCompile: ~command /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongodb/lib/cmap/connection.js:162:12
+      1  100.0%          LazyCompile: ~<anonymous> /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongodb/lib/sdam/server.js:184:42
+      1  100.0%            LazyCompile: ~<anonymous> /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongodb/lib/cmap/connection_pool.js:265:23
+      1    1.4%      LazyCompile: ~SourceNode_prepend /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/source-map/lib/source-node.js:197:59
+      1  100.0%        LazyCompile: ~objectLiteral /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:123:40
+      1  100.0%          LazyCompile: ~objectLiteral /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:1002:40
+      1  100.0%            LazyCompile: ~setupHelperArgs /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:1104:44
+      1    1.4%      LazyCompile: ~ReadPreference /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongodb/lib/read_preference.js:26:16
+      1  100.0%        Eval: ~<anonymous> /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongodb/lib/read_preference.js:1:1
+      1  100.0%          LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1039:37
+      1  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1094:37
+      1    1.4%      LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1039:37
+      1  100.0%        LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1094:37
+      1  100.0%          LazyCompile: ~Module.load internal/modules/cjs/loader.js:938:33
+      1  100.0%            LazyCompile: ~Module._load internal/modules/cjs/loader.js:725:24
+      1    1.4%      LazyCompile: ~Connection.onOpen /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongoose/lib/connection.js:631:39
+      1  100.0%        LazyCompile: ~_setClient /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongoose/lib/connection.js:831:20
+      1  100.0%          LazyCompile: ~<anonymous> /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongoose/lib/connection.js:791:20
+      1  100.0%            LazyCompile: ~<anonymous> /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongodb/lib/utils.js:496:13
+      1    1.4%      LazyCompile: ~<anonymous> internal/fs/utils.js:345:35
+      1  100.0%        LazyCompile: ~<anonymous> internal/fs/utils.js:650:38
+      1  100.0%          LazyCompile: ~<anonymous> internal/fs/utils.js:662:42
+      1  100.0%            LazyCompile: ~readFile fs.js:318:18
+      1    1.4%      LazyCompile: ~<anonymous> /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongoose/lib/helpers/promiseOrCallback.js:10:23
+      1  100.0%        LazyCompile: ~<anonymous> /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongoose/lib/model.js:4997:18
+      1  100.0%          LazyCompile: ~<anonymous> /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongoose/lib/model.js:1375:85
+      1  100.0%            LazyCompile: ~<anonymous> /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongoose/lib/utils.js:459:18
+      1    1.4%      LazyCompile: ~<anonymous> /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/connect-mongo/build/main/lib/MongoStore.js:124:42
+      1  100.0%        /usr/bin/node
+      1  100.0%          LazyCompile: ~processTicksAndRejections internal/process/task_queues.js:67:35
+      1    1.4%      LazyCompile: *stat internal/modules/cjs/loader.js:146:14
+      1  100.0%        LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:462:28
+      1  100.0%          LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:816:35
+      1  100.0%            LazyCompile: ~Module._load internal/modules/cjs/loader.js:725:24
+      1    1.4%      LazyCompile: *resolve path.js:1067:10
+      1  100.0%        LazyCompile: *relative path.js:1166:11
+      1  100.0%          LazyCompile: ~renderView /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express-handlebars/lib/express-handlebars.js:183:19
+      1  100.0%            LazyCompile: ~render /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express/lib/view.js:133:40
+      1    1.4%      LazyCompile: *render /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express-handlebars/lib/express-handlebars.js:150:15
+      1  100.0%        /usr/bin/node
+      1    1.4%      LazyCompile: *readPackageScope internal/modules/cjs/loader.js:289:26
+      1  100.0%        LazyCompile: ~trySelf internal/modules/cjs/loader.js:409:17
+      1  100.0%          LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:816:35
+      1  100.0%            LazyCompile: ~Module._load internal/modules/cjs/loader.js:725:24
+      1    1.4%      LazyCompile: *normalizeString path.js:59:25
+      1  100.0%        LazyCompile: ~resolve path.js:1067:10
+      1  100.0%          LazyCompile: ~readPackage internal/modules/cjs/loader.js:258:21
+      1  100.0%            LazyCompile: ~readPackageScope internal/modules/cjs/loader.js:289:26
+      1    1.4%      LazyCompile: *ambiguousSexpr /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:248:42
+      1  100.0%        LazyCompile: ~SubExpression /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:236:40
+      1  100.0%          LazyCompile: ~MustacheStatement /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:215:48
+      1  100.0%            LazyCompile: *Program /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:113:28
+      1    1.4%      LazyCompile: *WhitespaceControl.Program /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/whitespace-control.js:19:48
+      1  100.0%        LazyCompile: *accept /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/visitor.js:57:26
+      1  100.0%          LazyCompile: ~WhitespaceControl.BlockStatement.WhitespaceControl.DecoratorBlock.WhitespaceControl.PartialBlockStatement /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/whitespace-control.js:75:152
+      1  100.0%            LazyCompile: *WhitespaceControl.Program /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/whitespace-control.js:19:48
+      1    1.4%      Eval: ~<anonymous> /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/tr46/lib/regexes.js:1:1
+      1  100.0%        LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1039:37
+      1  100.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1094:37
+      1  100.0%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:938:33
+      1    1.4%      Eval: ~<anonymous> /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongoose/lib/connection.js:1:1
+      1  100.0%        LazyCompile: *Module._compile internal/modules/cjs/loader.js:1039:37
+      1  100.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1094:37
+      1  100.0%            LazyCompile: *Module.load internal/modules/cjs/loader.js:938:33
+      4    4.0%    LazyCompile: *Module._compile internal/modules/cjs/loader.js:1039:37
+      4  100.0%      LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1094:37
+      3   75.0%        LazyCompile: *Module.load internal/modules/cjs/loader.js:938:33
+      3  100.0%          LazyCompile: ~Module._load internal/modules/cjs/loader.js:725:24
+      3  100.0%            LazyCompile: ~Module.require internal/modules/cjs/loader.js:966:36
+      1   25.0%        LazyCompile: ~Module.load internal/modules/cjs/loader.js:938:33
+      1  100.0%          LazyCompile: ~Module._load internal/modules/cjs/loader.js:725:24
+      1  100.0%            LazyCompile: ~Module.require internal/modules/cjs/loader.js:966:36
+      1    1.0%    RegExp: ^(?:"(\\["]|[^"])*")
+      1  100.0%      /usr/bin/node
+      1  100.0%        /usr/bin/node
+      1  100.0%          LazyCompile: *next /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:478:32
+      1  100.0%            LazyCompile: ~lex /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:525:30
+      1    1.0%    LazyCompile: *realpathSync fs.js:1722:22
+      1  100.0%      LazyCompile: ~toRealPath internal/modules/cjs/loader.js:361:20
+      1  100.0%        LazyCompile: ~tryFile internal/modules/cjs/loader.js:352:17
+      1  100.0%          LazyCompile: ~tryExtensions internal/modules/cjs/loader.js:368:23
+      1  100.0%            LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:462:28
+      1    1.0%    LazyCompile: *readFile fs.js:318:18
+      1  100.0%      LazyCompile: ~go$readFile /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/graceful-fs/graceful-fs.js:117:26
+      1  100.0%        LazyCompile: ~readFile /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/graceful-fs/graceful-fs.js:111:21
+      1  100.0%          LazyCompile: *<anonymous> internal/util.js:339:24
+      1  100.0%            /usr/bin/node
+
+     66    1.1%  __write
+     43   65.2%    /usr/bin/node
+      6   14.0%      /usr/bin/node
+      1   16.7%        LazyCompile: ~next /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:478:32
+      1  100.0%          LazyCompile: ~lex /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:525:30
+      1  100.0%            LazyCompile: ~lex /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:295:25
+      1   16.7%        LazyCompile: ~h /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/yargs/build/index.cjs:1:1423
+      1  100.0%          LazyCompile: ~boolean /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/yargs/build/index.cjs:1:28817
+      1  100.0%            LazyCompile: ~addHelpOpt /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/yargs/build/index.cjs:1:27910
+      1   16.7%        LazyCompile: ~finalizeEsmResolution internal/modules/cjs/loader.js:908:31
+      1  100.0%          LazyCompile: ~resolveExports internal/modules/cjs/loader.js:440:24
+      1  100.0%            LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:462:28
+      1   16.7%        LazyCompile: ~Schema.virtual /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongoose/lib/schema.js:1773:36
+      1  100.0%          LazyCompile: ~addIdGetter /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongoose/lib/helpers/schema/idGetter.js:7:38
+      1  100.0%            LazyCompile: ~_preCompile /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongoose/lib/schema.js:2206:52
+      1   16.7%        Eval: ~<anonymous> /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/ws/lib/websocket.js:1:1
+      1  100.0%          LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1039:37
+      1  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1094:37
+      1   16.7%        Eval: ~<anonymous> /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/knex/lib/schema/tablebuilder.js:1:1
+      1  100.0%          LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1039:37
+      1  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1094:37
+      1    2.3%      LazyCompile: ~y /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/yargs/build/index.cjs:1:2713
+      1  100.0%        LazyCompile: ~<anonymous> /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/yargs/build/index.cjs:1:44503
+      1  100.0%          LazyCompile: ~Jt /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/yargs/build/index.cjs:1:26935
+      1  100.0%            LazyCompile: ~le.Yargs /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/yargs/build/index.cjs:1:59382
+      1    2.3%      LazyCompile: ~wrap /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:101:22
+      1  100.0%        LazyCompile: ~push /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:868:22
+      1  100.0%          LazyCompile: ~replaceStack /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:892:38
+      1  100.0%            LazyCompile: ~resolvePath /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:492:36
+      1    2.3%      LazyCompile: ~value internal/console/constructor.js:262:20
+      1  100.0%        LazyCompile: ~log internal/console/constructor.js:363:6
+      1  100.0%          /usr/bin/node
+      1  100.0%            LazyCompile: ~<anonymous> /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/log4js/lib/appenders/console.js:5:10
+      1    2.3%      LazyCompile: ~update /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongodb/lib/sdam/topology_description.js:142:11
+      1  100.0%        LazyCompile: ~serverUpdateHandler /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongodb/lib/sdam/topology.js:366:24
+      1  100.0%          LazyCompile: ~<anonymous> /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongodb/lib/sdam/topology.js:530:53
+      1  100.0%            LazyCompile: ~emit events.js:349:44
+      1    2.3%      LazyCompile: ~setOption /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongodb/lib/connection_string.js:396:19
+      1  100.0%        LazyCompile: ~parseOptions /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongodb/lib/connection_string.js:211:22
+      1  100.0%          LazyCompile: ~MongoClient /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongodb/lib/mongo_client.js:60:16
+      1  100.0%            LazyCompile: ~<anonymous> /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongoose/lib/connection.js:781:31
+      1    2.3%      LazyCompile: ~prepareMainThreadExecution internal/bootstrap/pre_execution.js:21:36
+      1  100.0%        Eval: ~<anonymous> internal/main/run_main_module.js:1:1
+      1    2.3%      LazyCompile: ~patchProcessObject internal/bootstrap/pre_execution.js:76:28
+      1  100.0%        LazyCompile: ~prepareMainThreadExecution internal/bootstrap/pre_execution.js:21:36
+      1  100.0%          Eval: ~<anonymous> internal/main/run_main_module.js:1:1
+      1    2.3%      LazyCompile: ~passwordDigest /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongodb/lib/cmap/auth/scram.js:182:24
+      1  100.0%        LazyCompile: ~continueScramConversation /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongodb/lib/cmap/auth/scram.js:93:35
+      1  100.0%          LazyCompile: ~<anonymous> /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongodb/lib/cmap/auth/scram.js:85:80
+      1  100.0%            LazyCompile: ~messageHandler /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongodb/lib/cmap/connection.js:416:35
+      1    2.3%      LazyCompile: ~parseHostName /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/whatwg-url/lib/url-state-machine.js:773:65
+      1  100.0%        LazyCompile: ~URLStateMachine /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/whatwg-url/lib/url-state-machine.js:481:25
+      1  100.0%          LazyCompile: ~module.exports.basicURLParse /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/whatwg-url/lib/url-state-machine.js:1206:41
+      1  100.0%            LazyCompile: ~URLImpl /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/whatwg-url/lib/URL-impl.js:7:14
+      1    2.3%      LazyCompile: ~parseConnectionString /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/knex/lib/knex-builder/internal/parse-connection.js:17:48
+      1  100.0%        LazyCompile: ~resolveConfig /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/knex/lib/knex-builder/internal/config-resolver.js:7:23
+      1  100.0%          LazyCompile: ~knex /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/knex/lib/knex-builder/Knex.js:9:14
+      1  100.0%            Eval: ~<anonymous> /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/src/router/ProductosDAO.js:1:1
+      1    2.3%      LazyCompile: ~invokeAmbiguous /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:699:44
+      1  100.0%        LazyCompile: ~compile /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      1  100.0%          LazyCompile: ~compileInput /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:507:24
+      1  100.0%            LazyCompile: ~ret /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:515:15
+      1    2.3%      LazyCompile: ~handleOperationResult /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongodb/lib/sdam/server.js:315:42
+      1  100.0%        LazyCompile: ~messageHandler /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongodb/lib/cmap/connection.js:416:35
+      1  100.0%          LazyCompile: ~emit events.js:349:44
+      1  100.0%            LazyCompile: ~processIncomingData /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongodb/lib/cmap/message_stream.js:79:29
+      1    2.3%      LazyCompile: ~handle /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%        LazyCompile: ~trim_prefix /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express/lib/router/index.js:288:23
+      1  100.0%          LazyCompile: ~<anonymous> /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express/lib/router/index.js:275:64
+      1  100.0%            LazyCompile: ~process_params /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/express/lib/router/index.js:333:47
+      1    2.3%      LazyCompile: ~getIndexes /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongoose/lib/helpers/schema/getIndexes.js:11:37
+      1  100.0%        LazyCompile: ~Schema.indexes /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongoose/lib/schema.js:1755:36
+      1  100.0%          LazyCompile: ~_ensureIndexes /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongoose/lib/model.js:1686:24
+      1  100.0%            LazyCompile: ~<anonymous> /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongoose/lib/model.js:1648:52
+      1    2.3%      LazyCompile: ~exports.default /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/decorators/inline.js:7:31
+      1  100.0%        LazyCompile: ~registerDefaultDecorators /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/decorators.js:13:35
+      1  100.0%          LazyCompile: ~HandlebarsEnvironment /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars/base.js:46:31
+      1  100.0%            LazyCompile: ~create /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/handlebars/dist/cjs/handlebars.runtime.js:40:16
+      1    2.3%      LazyCompile: ~execute /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongodb/lib/operations/indexes.js:128:12
+      1  100.0%        LazyCompile: ~<anonymous> /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongodb/lib/operations/execute_operation.js:147:61
+      1  100.0%          LazyCompile: ~processWaitQueue /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongodb/lib/sdam/topology.js:606:26
+      1  100.0%            LazyCompile: ~selectServer /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongodb/lib/sdam/topology.js:268:17
+      1    2.3%      LazyCompile: ~emit events.js:349:44
+      1  100.0%        LazyCompile: ~processIncomingData /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongodb/lib/cmap/message_stream.js:79:29
+      1  100.0%          LazyCompile: ~_write /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongodb/lib/cmap/message_stream.js:26:11
+      1  100.0%            LazyCompile: ~writeOrBuffer internal/streams/writable.js:334:23
+      1    2.3%      LazyCompile: ~createDebug /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/compression/node_modules/debug/src/debug.js:63:21
+      1  100.0%        Eval: ~<anonymous> /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/compression/index.js:1:1
+      1  100.0%          LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1039:37
+      1  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1094:37
+      1    2.3%      LazyCompile: ~connect _tls_wrap.js:1582:35
+      1  100.0%        LazyCompile: ~makeConnection /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongodb/lib/cmap/connect.js:247:24
+      1  100.0%          LazyCompile: ~connect /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongodb/lib/cmap/connect.js:32:17
+      1  100.0%            LazyCompile: ~checkServer /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongodb/lib/sdam/monitor.js:139:21
+      1    2.3%      LazyCompile: ~compareObjectId /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongodb/lib/sdam/topology_description.js:260:25
+      1  100.0%        LazyCompile: ~updateRsFromPrimary /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongodb/lib/sdam/topology_description.js:276:29
+      1  100.0%          LazyCompile: ~update /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongodb/lib/sdam/topology_description.js:142:11
+      1  100.0%            LazyCompile: ~serverUpdateHandler /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongodb/lib/sdam/topology.js:366:24
+      1    2.3%      LazyCompile: ~command /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongodb/lib/sdam/server.js:139:12
+      1  100.0%        LazyCompile: ~executeCommand /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongodb/lib/operations/command.js:48:19
+      1  100.0%          LazyCompile: ~execute /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongodb/lib/operations/indexes.js:76:12
+      1  100.0%            LazyCompile: ~execute /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongodb/lib/operations/indexes.js:128:12
+      1    2.3%      LazyCompile: ~acquire /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongodb/lib/sessions.js:577:12
+      1  100.0%        LazyCompile: ~get serverSession /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongodb/lib/sessions.js:93:22
+      1  100.0%          LazyCompile: ~applySession /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongodb/lib/sessions.js:628:22
+      1  100.0%            LazyCompile: ~command /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongodb/lib/cmap/connection.js:162:12
+      1    2.3%      LazyCompile: ~_setClient /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongoose/lib/connection.js:831:20
+      1  100.0%        LazyCompile: ~<anonymous> /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongoose/lib/connection.js:791:20
+      1  100.0%          LazyCompile: ~<anonymous> /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongodb/lib/utils.js:496:13
+      1  100.0%            LazyCompile: ~<anonymous> /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongodb/lib/mongo_client.js:127:58
+      1    2.3%      LazyCompile: ~Topology /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongodb/lib/sdam/topology.js:40:16
+      1  100.0%        LazyCompile: ~createTopology /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongodb/lib/operations/connect.js:44:24
+      1  100.0%          LazyCompile: ~<anonymous> /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongodb/lib/operations/connect.js:32:67
+      1  100.0%            LazyCompile: ~<anonymous> /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongodb/lib/connection_string.js:72:39
+      1    2.3%      LazyCompile: ~ServerDescription /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongodb/lib/sdam/server_description.js:34:16
+      1  100.0%        LazyCompile: ~Topology /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongodb/lib/sdam/topology.js:40:16
+      1  100.0%          LazyCompile: ~createTopology /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongodb/lib/operations/connect.js:44:24
+      1  100.0%            LazyCompile: ~<anonymous> /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongodb/lib/operations/connect.js:32:67
+      1    2.3%      LazyCompile: ~Server /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/socket.io/dist/index.js:49:16
+      1  100.0%        Eval: ~<anonymous> /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/server.js:1:1
+      1  100.0%          LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1039:37
+      1  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1094:37
+      1    2.3%      LazyCompile: ~Module.load internal/modules/cjs/loader.js:938:33
+      1  100.0%        LazyCompile: ~Module._load internal/modules/cjs/loader.js:725:24
+      1  100.0%          LazyCompile: ~executeUserEntryPoint internal/modules/run_main.js:68:31
+      1  100.0%            Eval: ~<anonymous> internal/main/run_main_module.js:1:1
+      1    2.3%      LazyCompile: ~Long.compare /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/bson/lib/long.js:291:39
+      1  100.0%        LazyCompile: ~Long.comp /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/bson/lib/long.js:311:36
+      1  100.0%          LazyCompile: ~Long.lessThanOrEqual /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/bson/lib/long.js:516:47
+      1  100.0%            LazyCompile: ~deserializeObject /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/bson/lib/parser/deserializer.js:65:27
+      1    2.3%      LazyCompile: ~Jt /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/yargs/build/index.cjs:1:26935
+      1  100.0%        LazyCompile: ~le.Yargs /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/yargs/build/index.cjs:1:59382
+      1  100.0%          Eval: ~<anonymous> /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/server.js:1:1
+      1  100.0%            LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1039:37
+      1    2.3%      LazyCompile: ~E internal/errors.js:343:11
+      1  100.0%        Eval: ~<anonymous> internal/errors.js:1:1
+      1  100.0%          LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1  100.0%            LazyCompile: ~nativeModuleRequire internal/bootstrap/loaders.js:306:29
+      1    2.3%      LazyCompile: ~ConnectionPool /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongodb/lib/cmap/connection_pool.js:47:16
+      1  100.0%        LazyCompile: ~Server /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongodb/lib/sdam/server.js:28:16
+      1  100.0%          LazyCompile: ~createAndConnectServer /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongodb/lib/sdam/topology.js:524:32
+      1  100.0%            LazyCompile: ~<anonymous> /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongodb/lib/sdam/topology.js:550:52
+      1    2.3%      LazyCompile: ~Connection /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongodb/lib/cmap/connection.js:38:16
+      1  100.0%        LazyCompile: ~<anonymous> /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongodb/lib/cmap/connect.js:33:63
+      1  100.0%          LazyCompile: ~callback /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongodb/lib/cmap/connect.js:260:31
+      1  100.0%            LazyCompile: ~connectHandler /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/mongodb/lib/cmap/connect.js:304:28
+      1    2.3%      LazyCompile: ~<anonymous> /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/log4js/lib/categories.js:149:32
+      1  100.0%        /usr/bin/node
+      1  100.0%          LazyCompile: ~<anonymous> /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/log4js/lib/categories.js:146:25
+      1  100.0%            /usr/bin/node
+      1    2.3%      LazyCompile: *SourceNode_walk /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/source-map/lib/source-node.js:221:53
+      1  100.0%        LazyCompile: *SourceNode_walk /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/source-map/lib/source-node.js:221:53
+      1  100.0%          LazyCompile: ~SourceNode_toString /home/nmastromarino/Codigo/CoderHouse-Backend/Clase 32 - TP Logger gzip profiling/node_modules/source-map/lib/source-node.js:318:61
+      1  100.0%            /usr/bin/node
+      1    2.3%      Eval: ~<anonymous> internal/process/esm_loader.js:1:1
+      1  100.0%        LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1  100.0%          LazyCompile: ~nativeModuleRequire internal/bootstrap/loaders.js:306:29
+      1  100.0%            Eval: ~<anonymous> internal/modules/cjs/loader.js:1:1
+      1    2.3%      Eval: ~<anonymous> internal/bootstrap/node.js:1:1
+      1    2.3%      Eval: ~<anonymous> _http_server.js:1:1
+      1  100.0%        LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1  100.0%          LazyCompile: ~nativeModuleRequire internal/bootstrap/loaders.js:306:29
+      1  100.0%            Eval: ~<anonymous> http.js:1:1
+     10   15.2%    LazyCompile: *Module._compile internal/modules/cjs/loader.js:1039:37
+     10  100.0%      LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1094:37
+      5   50.0%        LazyCompile: ~Module.load internal/modules/cjs/loader.js:938:33
+      5  100.0%          LazyCompile: ~Module._load internal/modules/cjs/loader.js:725:24
+      5  100.0%            LazyCompile: ~Module.require internal/modules/cjs/loader.js:966:36
+      5   50.0%        LazyCompile: *Module.load internal/modules/cjs/loader.js:938:33
+      5  100.0%          LazyCompile: ~Module._load internal/modules/cjs/loader.js:725:24
+      5  100.0%            LazyCompile: ~Module.require internal/modules/cjs/loader.js:966:36
+
