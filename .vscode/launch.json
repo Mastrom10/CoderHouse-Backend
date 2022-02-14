@@ -11,8 +11,8 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/Clase 32 - TP Logger gzip profiling/server.js",
-            "cwd": "${workspaceFolder}/Clase 32 - TP Logger gzip profiling",
+            "program": "${workspaceFolder}/Clase 34 - TP DESPLEGAR NUESTRO PROYECTO EN LA NUBE/server.js",
+            "cwd": "${workspaceFolder}/Clase 34 - TP DESPLEGAR NUESTRO PROYECTO EN LA NUBE",
         }
     ]
 }
